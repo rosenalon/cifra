@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head><title>CIFRA</title>
+
+<!-- COLORS: #0090d7 and #76b82a -->
+
+<style type="text/css">
+:root{
+	--blue: #0090d7;
+	--green: #76b82a;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: Verdana, sans-serif;
+	max-width: 1024px;
+	margin-right: auto;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+main{
+    font-family: Verdana, sans-serif; 
+    font-size: 12pt;
+    line-height: 140%;
+    color: black;
+    background-color: white;
+    float: center;
+    -webkit-text-size-adjust: 100%;	
+}
+
+p { margin: 10pt; margin-bottom: 6pt; }
+
+a:link, a:visited { color: var(--blue); text-decoration: none; }
+a:hover, a:active { color: var(--green); text-decoration: none; }
+
+/* Header */
+.header{
+    background-color: white;
+    box-shadow: 0px 1px 0px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+/* Logo */
+.smalllogo, .logo{
+    display: inline-block;
+    color: var(--black);
+    margin-left: 10px;
+}
+
+.smalllogo img, .logo img{
+	height: 60px;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+
+}
+.menu li{
+    display: block;
+    padding: 20px 30px;
+    color: var(--green);
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.menu li:hover{
+/*    background-color: var(--blue); */
+	border: 1pt solid var(--blue);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 30px 30px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--black);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--black);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+	
+	.smalllogo{
+		display: none;
+	}
+	
+	.logo{
+		display: inline;
+	} 
+}
+
+@media (max-width: 767px) {
+	.smalllogo{
+		display: inline;
+	}
+	
+	.logo{
+		display: none;
+	} 	
+}
+
+.clear
+{  
+    clear: both;  
+    height: 0;  
+    visibility: hidden;  
+    display: block;  
+}  
+
+.member
+{
+	margin: 10pt;
+	overflow: auto;
+}
+
+.member img
+{
+	float: left;
+	max-width: 200px;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+h1
+{
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 16pt 10pt 16pt 10pt;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  color: var(--blue);
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+li
+{
+	margin-left: 10pt;
+	margin-bottom: 6pt;
+}
+</style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="smalllogo"><img src="C.svg"></img></a>		
+        <a href="#" class="logo"><img src="CIFRA.svg"></img></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li id="menuabout" onmousedown="display('about')">about</li>
+                <li id="menupeople" onmousedown="display('people')">people</li>
+                <li id="menuevents" onmousedown="display('events')">events</li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+<div id="about" style="display:none">
+<p>The CIFRA institute is the place to be<br>at Bocconi University in Milan Italy<br>if you ain't been there already you come and see</p>
+
+<p>if your security is too sustained<br>the people at CIFRA will make it fine-grained<br>cryptographers and physicists rule the day<br>when you're lost they'll show you the way</p>
+	
+<p>Zecchina Trevisan Mezard and Parisi<br>I would have done it if it was so easy</p>
+	
+</div>
+
+<div id="people" style="display:none">
+<h1>Members</h1>
+	
+<div class="member">
+	<img src="members/rosen.jpeg">
+    <a href="https://www.alonrosen.net">Alon Rosen</a>'s primary field of research is cryptography, with a focus on the theory and application of cryptographic protocols. He is also interested in the construction of efficient cryptographic schemes with provable security guarantees.
+</div>
+<div class="member">
+	<img src="members/orsini.jpg">
+	<a href="https://cseao.github.io/">Emanuela Orsini</a>: My main research area is cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. My aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  My interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
+</div>	
+<div class="member">
+	<img src="members/malavolta.jpg">
+	<a href="https://sites.google.com/view/giuliomalavolta/">Giulio Malavolta</a>'s research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.
+</div>	
+
+<h1>Fellows</h1>
+
+<div class="member">
+	<img src="members/mour.jpeg">
+	<a href="https://www.wisdom.weizmann.ac.il/~tamer/">Tamer Mour</a> has just completed his graduate studies in the field of cryptography, specifically in computational proof systems. Despite cryptography being his main focus so far, Tamer is generally interested in modelling and solving problems that arise in societal interactions, using theoretical computer science and math.
+</div>
+
+<h1>Visitors</h1>
+
+<ul>
+<li>Miguel Cueto Noval</li>
+<li>Charlotte Hoffman</li>
+<li>Nikolaj Schwartzbach</li>
+<li>Dan Mitropolsky</li>
+<li>Romain Bourneuf</li>
+</ul>
+</div>
+
+<div id="events" style="display:none">
+<p>Coming soon!</p>
+</div>
+</main>
+
+<!-- navigation -->
+<script type="text/javascript">
+var cur_active = "about";
+
+document.getElementById(cur_active).style.display = 'block';
+document.getElementById("menu" + cur_active).style.color = 'var(--blue)';
+
+function display(new_active) {
+	document.getElementById(cur_active).style.display = 'none';	
+	document.getElementById(new_active).style.display = 'block';
+	document.getElementById("menu" + cur_active).style.color = 'var(--green)';
+	document.getElementById("menu" + new_active).style.color = 'var(--blue)';
+	cur_active = new_active;
+}
+</script>
+</body>
+</html>
+
