@@ -5,6 +5,10 @@
 <!-- COLORS: #0090d7 and #76b82a -->
 
 <style type="text/css">
+
+
+@import "bootstrap";
+
 :root{
 	--blue: #0090d7;
 	--green: #76b82a;
@@ -223,6 +227,59 @@ li
 	margin-left: 10pt;
 	margin-bottom: 6pt;
 }
+
+
+
+/* Team & Publications */
+#gridid img { margin: 0px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888 }
+#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888 }
+#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888 }
+#gridid .row { margin-bottom: 0px; }
+
+
+/* Grid overrides */
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6,
+.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* Grid overrides */
+.col-sm-4 {
+	padding-left: 26px;
+	padding-right: 26px;
+}
+.profile {
+    clear: both;
+    width: 100%;
+	margin: 0 auto 0 auto; /* Add margin at the top, bottom, left, and right to center the profile */
+    padding: 5px; /* Add padding for spacing */
+}
+
+.profile img {
+    /*float: left;*/
+	vertical-align:middle;
+    width: 15%;
+	margin bottom:0;
+}
+
+.profile h4 {
+    margin: 10px 0 5px; /* Add margin to the top of h4 and reduce the bottom margin */
+}
+
+.profile p {
+    margin: 10px; 
+	padding-left: 0px;
+    padding-right: 30px;
+}
+
+.profile ul {
+    overflow: hidden;
+    margin:0;
+	
+	}
+
+
 </style>
 </head>
 
@@ -258,29 +315,101 @@ li
 <div id="people" style="display:none">
 
 <h1>Members</h1>
+
+<div id="gridid" class="container">
+    <!-- Alon 's Profile -->
+    <div class="profile">
+        <p><img src="members/rosen.jpeg" class="img-responsive" width="15%" style="float: left" /></p>
+		
+        <h4><a href="https://www.alonrosen.net">Alon Rosen</a> (Director)</h4>
+        <ul style="overflow: hidden">
+            <li>Alon is interested in the foundations of cryptography. Recently, he has been looking into connections of public-key cryptography with fine-grained complexity and statistical inference.</li>
+        </ul>
+    </div>
+
+    <!-- Giulio 's Profile -->
+    <div class="profile">
+        <p><img src="members/malavolta1.jpg" class="img-responsive" width="15%" style="float: left" /></p>
+        
+		<h4><a href="https://sites.google.com/view/giuliomalavolta/">Giulio Malavolta</a> (Associate Director)</h4>
+        
+        <ul style="overflow: hidden">
+            <li>Giulio's research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. 
+			He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.</li>
+        </ul>
+    </div>
+	
+	<!-- Emmanuela's Profile -->
+	<div class="profile">
+		<!--<img src="members/orsini.jpg">-->
+		<p><img src="members/orsini.jpg" class="img-responsive" width="15%" style="float: left" /></p>
+		<h4><a href="https://cseao.github.io/">Emmanuela Orsini</a> (Associate Director)</h4> 
+		
+			<ul style="overflow: hidden">
+            <li>
+			Emmanuela's main research area is 
+			cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. 
+			Her aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  
+			Her interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
+		</li></ul>
+	</div>
+	
+	<!-- Luca's Profile -->
+	<div class="profile">
+		<!--<img src="members/trevisan.jpeg">-->
+		<h4><a href="https://lucatrevisan.github.io/">Luca Trevisan</a></h4> 
+		
+        <ul style="overflow: hidden">
+            <li>
+			Luca's research is in theoretical computer science, with a focus on computational complexity, 
+			on the analysis of algorithms, on the foundations of cryptography, and on topics at the intersection of theoretical computer science and pure mathematics.
+		</li></ul>
+	</div>
+
+	<!-- Andrej's Profile -->
+	<div class="profile">
+		<!--<img src="members/bogdanov.jpeg">-->
+		<h4><a href="https://andrejb.net/">Andrej Bogdanov</a></a></h4> 
+		<p><i></i></p>
+        <ul style="overflow: hidden">
+            <li>
+			Andrej is interested in pseudorandomness, the foundations of cryptography, and the complexity of cryptographic constructions.
+		</li></ul>
+	</div>	
+
+
+
+</div>
+
+
+
+
+<!-- OLD
 <div class="member">
-	<!--<img src="members/rosen.jpeg">-->
+	
     <a href="https://www.alonrosen.net">Alon Rosen</a> (Director): Alon's is interested in the foundations of cryptography. Recently, he has been looking into connections of public-key cryptography with fine-grained complexity and statistical inference.
 </div>
 
 <div class="member">
-	<!--<img src="members/malavolta.jpg">-->
+	
 	<a href="https://sites.google.com/view/giuliomalavolta/">Giulio Malavolta</a> (Associate Director): Giulio's research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.
 </div>	
 <div class="member">
-	<!--<img src="members/orsini.jpg">-->
+	
 	<a href="https://cseao.github.io/">Emmanuela Orsini</a> (Associate Director): Emmanuela's main research area is cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. Her aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  Her interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
 </div>	
 
 <div class="member">
-	<!--<img src="members/trevisan.jpeg">-->
+	
     <a href="https://lucatrevisan.github.io/">Luca Trevisan</a>: Luca's research is in theoretical computer science, with a focus on computational complexity, on the analysis of algorithms, on the foundations of cryptography, and on topics at the intersection of theoretical computer science and pure mathematics.
 </div>
 
 <div class="member">
-	<!--<img src="members/bogdanov.jpg">-->
+	
 	<a href="https://andrejb.net/">Andrej Bogdanov</a>: Andrej is interested in pseudorandomness, the foundations of cryptography, and the complexity of cryptographic constructions.
 </div>	
+
+-->
 
 <h1>Postdoctoral Fellows</h1>
 <div class="member">
