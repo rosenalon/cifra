@@ -60,10 +60,17 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 }
 /* Logo */
 .smalllogo, .logo{
-    display: inline-block;
     color: var(--black);
     margin-left: 10px;
 }
+
+.smalllogo{
+	display: inline-block;
+} 	
+
+.logo{
+	display: none;
+} 	
 
 .smalllogo img, .logo img{
 	height: 100px;
@@ -175,11 +182,11 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 	}
 	
 	.logo{
-		display: inline;
+		display: inline-block;
 	} 
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 	.smalllogo{
 		display: inline;
 	}
@@ -187,7 +194,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 	.logo{
 		display: none;
 	} 	
-}
+} */
 
 .clear
 {  
