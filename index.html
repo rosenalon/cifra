@@ -110,9 +110,9 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 .hamb-line {
     background: var(--black);
     display: block;
-    height: 2px;
+    height: 3px;
     position: relative;
-    width: 24px;
+    width: 36px;
 
 } /* Style span tag */
 
@@ -127,10 +127,10 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     width: 100%;
 }
 .hamb-line::before{
-    top: 5px;
+    top: 8px;
 }
 .hamb-line::after{
-    top: -5px;
+    top: -8px;
 }
 
 .side-menu {
@@ -154,7 +154,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 }
 
 /* Responsiveness */
-@media (min-width: 960px) {
+@media (min-width: 840px) {
     .nav{
         max-height: none;
         top: 0;
@@ -169,7 +169,6 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     .menu a:hover{
         background-color: transparent;
         color: var(--gray);
-
     }
 
     .hamb{
