@@ -162,7 +162,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 }
 
 /* Responsiveness */
-@media (min-width: 600px) {
+@media (min-width: 640px) {
     .nav{
         max-height: none;
         top: 0;
@@ -626,11 +626,11 @@ function toggleFooterVisibility() {
   var viewportHeight = window.innerHeight;
 
   if (contentHeight <= viewportHeight) {
-    footer.style.display = 'block';
+    footer.style.display = 'inline';
   } else {
     var scrollY = window.scrollY || window.pageYOffset;
     if (scrollY + viewportHeight >= contentHeight) {
-      footer.style.display = 'block';
+      footer.style.display = 'inline';
     } else {
       footer.style.display = 'none';
     }
