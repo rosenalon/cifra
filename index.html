@@ -161,6 +161,27 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     top:0;
 }
 
+/* Footer Styles */
+.footer {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 10px 5px 10px;
+    position: fixed;
+    width: 100%;
+    height: 30px;
+	left: 0;
+	bottom: 0;
+    display: none;
+}
+
+.footer-content {
+    max-width: 1024px; 
+    margin: 0 auto; 
+	text-align: right;
+}
+
 /* Responsiveness */
 @media (min-width: 680px) {
     .nav{
@@ -182,6 +203,10 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     .hamb{
         display: none;
     }
+	
+	.footer {
+		display: block;
+	}
 }
 	
 @media (min-width: 1000px) {
@@ -192,6 +217,10 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     .logo{
 	display: inline-block;
     } 
+	
+	.footer {
+		display: block;
+	}
 }
 	
 .clear
@@ -202,6 +231,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     display: block;  
 }  
 
+/*
 .member
 {
 	margin: 10pt;
@@ -215,6 +245,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
 	vertical-align: middle;
 	padding-right: 10px;
 }
+*/
 
 h1
 {
@@ -233,14 +264,12 @@ li
 	margin-bottom: 6pt;
 }
 
-
-
 /* Team & Publications */
-#gridid img { margin: 0px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888 }
-#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888 }
-#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888 }
+#gridid img { margin: 0px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888; }
+#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888; }
+#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888; }
 #gridid .row { margin-bottom: 0px; }
-
+#gridid { display: block; }
 
 /* Grid overrides */
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6,
@@ -257,25 +286,25 @@ li
 .profile {
     clear: both;
     width: 100%;
-	margin: 0 auto 0 auto; /* Add margin at the top, bottom, left, and right to center the profile */
+	margin: 0 10px 0 10px; /* Add margin at the top, bottom, left, and right to center the profile */
     padding: 5px; /* Add padding for spacing */
+	display: grid;
+	grid-template-columns: 160px auto;
 }
 
 .profile img {
-    /*float: left;*/
+	margin-left: 30px;
+    width: 100%;
+    float: left;
 	vertical-align:middle;
-    width: 15%;
-	margin bottom:0;
 }
 
 .profile h4 {
-    margin: 10px 0 5px; /* Add margin to the top of h4 and reduce the bottom margin */
+    margin: 10px 0 5px 15px; /* Add margin to the top of h4 and reduce the bottom margin */
 }
 
 .profile p {
-    margin: 10px; 
-	padding-left: 0px;
-    padding-right: 30px;
+    margin: 10px 10px 0px 15px; 
 }
 
 .profile ul {
@@ -283,38 +312,13 @@ li
     margin:0;
 }
 
-
 .bottom-v {
      margin-bottom: 3vh;
 }
-
-
-
-/* Footer Styles */
-.footer {
-    background-color: --blue;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    padding-left: 10px;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    margin: 0;
-    display:none;
-}
-.footer-content {
-    max-width: 1024px; 
-    margin: 0 auto; 
-    text-align: left; 
-}
-
 </style>
 </head>
 
-
 <body>
-
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
@@ -352,191 +356,122 @@ li
 </div>
 
 <div id="people" style="display:none">
-
 <h1>Members</h1>
 
 <div id="gridid" class="container">
     <!-- Alon 's Profile -->
     <div class="profile">
-        <p><img src="members/rosen2.jpg" class="img-responsive" width="15%" style="float: left" /></p>
-		
-        <h4><a href="https://www.alonrosen.net">Alon Rosen</a> (Director)</h4>
-        <ul style="overflow: hidden">
-            <li>Alon is interested in the foundations of cryptography. Recently, he has been looking into connections of public-key cryptography with fine-grained complexity and statistical inference.</li>
-        </ul>
+        <img src="members/rosen2.jpg" class="img-responsive">
+		<div>
+		<h4><a href="https://www.alonrosen.net">Alon Rosen</a> (Director)</h4>
+        <p style="overflow: hidden">Alon is interested in the foundations of cryptography. Recently, he has been looking into connections of public-key cryptography with fine-grained complexity and statistical inference.</li></p>
+		</div>
     </div>
 
     <!-- Giulio 's Profile -->
     <div class="profile">
-        <p><img src="members/malavolta2.jpg" class="img-responsive" width="15%" style="float: left" /></p>
-        
+        <img src="members/malavolta2.jpg" class="img-responsive">
+		<div>
 		<h4><a href="https://sites.google.com/view/giuliomalavolta/">Giulio Malavolta</a> (Associate Director)</h4>
-        
-        <ul style="overflow: hidden">
-            <li>Giulio's research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. 
-			He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.</li>
-        </ul>
+        <p style="overflow: hidden">Giulio's research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.</p>
+		</div>
     </div>
 	
 	<!-- Emmanuela's Profile -->
 	<div class="profile">
-		<!--<img src="members/orsini.jpg">-->
-		<p><img src="members/orsini.jpg" class="img-responsive" width="15%" style="float: left" /></p>
-
+		<img src="members/orsini.jpg" class="img-responsive">
+		<div>
 		<h4><a href="https://cseao.github.io/">Emmanuela Orsini</a> (Associate Director)</h4> 
-		
-			<ul style="overflow: hidden">
-            <li>
-			Emmanuela's main research area is 
-			cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. 
-			Her aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  
-			Her interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
-		</li></ul>
+		<p>Emmanuela's main research area is cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. Her aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  Her interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
+		</p>
+		</div>
 	</div>
 	
 	<!-- Luca's Profile -->
 	<div class="profile">
-		<!--<img src="members/luca.jpeg">-->
-        <p><img src="members/luca.jpeg" class="img-responsive" width="15%" style="float: left" /></p>
+ 	    <img src="members/luca.jpeg" class="img-responsive">
+		<div>
 		<h4><a href="https://lucatrevisan.github.io/">Luca Trevisan</a></h4> 
-		
-        <ul style="overflow: hidden">
-            <li>
-			Luca's research is in theoretical computer science, with a focus on computational complexity, 
-			on the analysis of algorithms, on the foundations of cryptography, and on topics at the intersection of theoretical computer science and pure mathematics.
-		</li></ul>
+		<p>Luca's research is in theoretical computer science, with a focus on computational complexity, on the analysis of algorithms, on the foundations of cryptography, and on topics at the intersection of theoretical computer science and pure mathematics.
+		</p>
+		</div>
 	</div>
 
 	<!-- Andrej's Profile -->
 	<div class="profile">
-		<!--<img src="members/andrej.jpeg">-->
-        <p><img src="members/andrej.jpeg" class="img-responsive" width="15%" style="float: left" /></p>
+        <img src="members/andrej.jpeg" class="img-responsive">
+		<div>
 		<h4><a href="https://andrejb.net/">Andrej Bogdanov</a></h4> 
-		<p><i></i></p>
-
-        <ul style="overflow: hidden">
-            <li>
-			Andrej is interested in pseudorandomness, the foundations of cryptography, and the complexity of cryptographic constructions.
-		</li></ul>
+		<p>Andrej is interested in pseudorandomness, the foundations of cryptography, and the complexity of cryptographic constructions.</p>
+	</div>
 	</div>	
 </div>	
 
-<!-- OLD
-<div class="member">
-	
-    <a href="https://www.alonrosen.net">Alon Rosen</a> (Director): Alon's is interested in the foundations of cryptography. Recently, he has been looking into connections of public-key cryptography with fine-grained complexity and statistical inference.
-</div>
-
-<div class="member">
-	
-	<a href="https://sites.google.com/view/giuliomalavolta/">Giulio Malavolta</a> (Associate Director): Giulio's research focuses on mathematical aspects of asymmetric cryptography and in the intersection with quantum computing. He is primarily interested in constructing new cryptographic schemes from well-founded computational assumptions.
-</div>	
-<div class="member">
-	
-	<a href="https://cseao.github.io/">Emmanuela Orsini</a> (Associate Director): Emmanuela's main research area is cryptography, with a focus on secure multiparty computation and zero-knowledge constructions. Her aim is to design efficient general-purpose protocols as well as specific solutions for privacy-preserving applications.  Her interests extend to post-quantum cryptography, algebraic coding theory, and computational algebra.
-</div>	
-
-<div class="member">
-	
-    <a href="https://lucatrevisan.github.io/">Luca Trevisan</a>: Luca's research is in theoretical computer science, with a focus on computational complexity, on the analysis of algorithms, on the foundations of cryptography, and on topics at the intersection of theoretical computer science and pure mathematics.
-</div>
-
-<div class="member">
-	
-	<a href="https://andrejb.net/">Andrej Bogdanov</a>: Andrej is interested in pseudorandomness, the foundations of cryptography, and the complexity of cryptographic constructions.
-</div>	
-
--->
-
-
-
-<!-- If we like to have pictures, we need to change also the secions below-->
-
-<br><br><br>
 <h1>Postdoctoral Fellows</h1>
 
 <div id="gridid" class="container">
     <!-- Pedro's Profile -->
     <div class="profile">
-        <p><img src="members/pedro.jpg" class="img-responsive" width="15%" style="float: left" /></p>
+        <img src="members/pedro.jpg" class="img-responsive">
+		<div>
         <h4><a href="https://sites.google.com/view/pmbranco">Pedro Branco</a></h4> 
-
-            <ul style="overflow: hidden">
-            <li>
-                Pedro is interested in all aspects of public-key cryptography, with a special focus on secure two-party computation.
-            </li></ul>
+		<p>Pedro is interested in all aspects of public-key cryptography, with a special focus on secure two-party computation.</p>
+        </div>
     </div>
 
     <!-- Tamer's Profile -->
     <div class="profile">
-	    <p><img src="members/mour.jpeg" class="img-responsive" width="15%" style="float: left" /></p>
-		    <h4><a href="https://www.wisdom.weizmann.ac.il/~tamer/">Tamer Mour</a></h4> 
-
-            <ul style="overflow: hidden">
-            <li>
-    		Tamer has just completed his graduate studies in the field of cryptography, specifically in computational proof systems. 
-    		Despite cryptography being his main focus so far, Tamer is generally interested in modelling and solving problems that 
-    		arise in societal interactions, using theoretical computer science and math.
-    		</li></ul>
+	    <img src="members/mour.jpeg" class="img-responsive">
+		<div>
+			<h4><a href="https://www.wisdom.weizmann.ac.il/~tamer/">Tamer Mour</a></h4> 
+            <p>Tamer has just completed his graduate studies in the field of cryptography, specifically in computational proof systems. Despite cryptography being his main focus so far, Tamer is generally interested in modelling and solving problems that arise in societal interactions, using theoretical computer science and math.
+    		</p>
+		</div>
     </div>
 
     <!-- Nikolaj's Profile -->
     <div class="profile">
-	    <p><img src="members/nikolaj.jpg" class="img-responsive" width="15%" style="float: left" /></p>
-		    <h4><a href="https://ignatieff.io/">Nikolaj I. Schwartzbach</a></h4> 
-
-            <ul style="overflow: hidden">
-            <li>    
-            Nikolaj works with analyzing incentives for Web3 / blockchain-based systems, with the goal of designing solutions 
-            that are not profitable to attack. More broadly, he is interested in subsets of cryptography, game theory, and 
-            computational complexity.
-		    </li></ul>
+	    <img src="members/nikolaj.jpg" class="img-responsive">
+		<div>
+		<h4><a href="https://ignatieff.io/">Nikolaj I. Schwartzbach</a></h4> 
+        <p>Nikolaj works with analyzing incentives for Web3 / blockchain-based systems, with the goal of designing solutions that are not profitable to attack. More broadly, he is interested in subsets of cryptography, game theory, and  computational complexity.</p>
+		</div>
     </div>
 </div>
 
-<br><br>
 <h1>Graduate Fellows</h1>
 
 <div id="gridid" class="container">
 
     <div class="profile">
-        <p><img src="members/daji.jpg" class="img-responsive" width="15%" style="float: left" /></p> 
-        <h4><a href="https://scholar.google.com/citations?user=0T-nqwsAAAAJ&hl=en">Daji Landis</a></h4> 
-        
-        <ul style="overflow: hidden">
-        <li>    
-        (MSc, Bocconi University), Sep 2022 - Sep 2023
-		</li></ul>
-        
+        <img src="members/daji.jpg" class="img-responsive"> 
+        <div>
+		<h4><a href="https://scholar.google.com/citations?user=0T-nqwsAAAAJ&hl=en">Daji Landis</a></h4> 
+        <p>MSc, Bocconi University, Sep 2022 - Sep 2023</p>
+		</div>		
     </div>
 
     <div class="profile">
-        <p><img src="members/CaicaiPhoto.jpg" class="img-responsive" width="15%" style="float: left" /></p>
-        <h4><a href="https://caicai-chen.github.io/">Caicai Chen</a></h4> 
-    
-        <ul style="overflow: hidden">
-        <li>    
-        (PhD, Bocconi University), Sep 2022 -
-		</li></ul>
+ 	    <img src="members/CaicaiPhoto.jpg" class="img-responsive">
+        <div>
+		<h4><a href="https://caicai-chen.github.io/">Caicai Chen</a></h4> 
+    	<p>PhD, Bocconi University, Sep 2022 -</p>
+		</div>
     </div>
 
     <div class="profile">
-        <p><img src="members/wei.jpg" class="img-responsive" width="15%" style="float: left" /></p>
+        <img src="members/wei.jpg" class="img-responsive">
+		<div>
         <h4><a href="https://qixiaoweiwei.github.io/">Wei Qi</a></h4> 
-
-        <ul style="overflow: hidden">
-        <li>    
-        (PhD, Bocconi University), Sep 2023 -
-        </li></ul>
+		<p>PhD, Bocconi University, Sep 2023 -</p>
+		</div>
     </div>
 </div>
 
 <div id="publications" style="display:none">
 </div>
 
-<br><br><br><br>
 <h1>Graduate Interns</h1>
-
 <ul>
 <li>Miguel Cueto Noval (ISTA), Oct 2021 - Dec 2021</li>
 <li>Charlotte Hoffman (ISTA), Oct 2021 - Dec 2021</li>
@@ -593,13 +528,10 @@ li
 
 
 <div class="footer">
-<div class="footer-content">
-            <p class="footer-text">
-    <p>Bocconi University | Via Guglielmo Röntgen, 1 | 20136 Milano MI</p>
-	<p class="footer-text">
+<div class="footer-content">Bocconi University | Via Guglielmo Röntgen 1 | 20136 Milano MI</div>
+	<!-- div style="text-align: right;">
         <a href="link_to_your_maps" target="_blank">Maps, Directions</a>
-    </p>
-</div>
+	</div -->
 </div>
 
 <!-- navigation -->
@@ -617,31 +549,35 @@ function display(new_active) {
 	cur_active = new_active;
 }
 
+/*
 function toggleFooterVisibility() {
   var footer = document.querySelector('.footer');
   var contentHeight = document.body.scrollHeight;
   var viewportHeight = window.innerHeight;
 
   if (contentHeight <= viewportHeight) {
-    footer.style.display = 'inline';
+    footer.style.display = 'block';
   } else {
     var scrollY = window.scrollY || window.pageYOffset;
     if (scrollY + viewportHeight >= contentHeight) {
-      footer.style.display = 'inline';
+      footer.style.display = 'block';
     } else {
       footer.style.display = 'none';
     }
   }
 }
 
+
 // Initially show the footer on short pages
 document.addEventListener('DOMContentLoaded', function () {
   toggleFooterVisibility();
 });
 
+
 // Toggle footer visibility on resize and scroll
 window.addEventListener('resize', toggleFooterVisibility);
 window.addEventListener('scroll', toggleFooterVisibility);
+*/
 </script>
 </body>
 </html>
