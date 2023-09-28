@@ -184,7 +184,7 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     }
 }
 	
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
     .smalllogo{		
 	display: none;
     }
@@ -331,6 +331,7 @@ li
             <ul class="menu">
                 <li id="menuabout" onmousedown="display('about')">about</li>
                 <li id="menupeople" onmousedown="display('people')">people</li>
+		<li id="menupeople" onmousedown="display('publications')">publications</li>
                 <li id="menuevents" onmousedown="display('events')">events</li>
             </ul>
         </nav>
@@ -533,6 +534,8 @@ li
     </div>
 </div>
 
+<div id="publications" style="display:none">
+</div>
 
 <br><br><br><br>
 <h1>Graduate Interns</h1>
@@ -602,10 +605,6 @@ li
 </div>
 </div>
 
-
-
-
-
 <!-- navigation -->
 <script type="text/javascript">
 var cur_active = "about";
@@ -646,14 +645,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // Toggle footer visibility on resize and scroll
 window.addEventListener('resize', toggleFooterVisibility);
 window.addEventListener('scroll', toggleFooterVisibility);
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
