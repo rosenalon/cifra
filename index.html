@@ -6,8 +6,6 @@
 
 <style type="text/css">
 
-@import "bootstrap";
-
 :root{
     --blue: #0090d7;
     --green: #76b82a;
@@ -46,6 +44,7 @@ main{
     float: center;
     -webkit-text-size-adjust: 100%;	
     padding: 0 0 180px;	
+    font-size:20px;
 }
 
 p { margin: 10pt; margin-bottom: 6pt; }
@@ -183,47 +182,6 @@ a:hover, a:active { color: var(--green); text-decoration: none; }
     margin: 0 auto; 
 	text-align: right;
 }
-
-/* Responsiveness */
-@media (min-width: 680px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
-    }
-
-    .hamb{
-        display: none;
-    }
-	
-	.footer {
-		display: block;
-	}
-}
-	
-@media (min-width: 1000px) {
-    .smalllogo{		
-	display: none;
-    }
-	
-    .logo{
-	display: inline-block;
-    } 
-	
-	.footer {
-		display: block;
-	}
-}
 	
 .clear
 {  
@@ -326,6 +284,64 @@ li
 .bottom-v {
      margin-bottom: 3vh;
 }
+body{
+
+}
+
+/* Responsiveness */
+@media (min-width: 680px) {
+    #bocconilogo{
+        max-width:1000px;
+    }
+    #poem{
+        float:left;
+        width:50%;
+        padding-left:0%;
+    }
+    #aboutid{
+        margin-left:50%;
+    }
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+
+    .hamb{
+        display: none;
+    }
+    
+    .footer {
+        display: block;
+    }
+    main{
+        font-size:1em;
+    }
+}
+    
+@media (min-width: 1000px) {
+    .smalllogo{     
+        display: none;
+    }
+    
+    .logo{
+        display: inline-block;
+    } 
+    
+    .footer {
+        display: block;
+    }
+}
 </style>
 </head>
 
@@ -352,16 +368,8 @@ li
 <main>
 <div id="about" style="display:none">
 
-<div id="aboutid">
-<p>
-    <a href="https://cs.unibocconi.eu/" target="_blank">
-    <img src="images/Bocconi.png" width="53%" height="53%" align="right">
-    <!-- <img style="border:2px solid var(--blue);" src="images/Bocconi.png" width="51%" height="51%" align="right">-->
-    </a>
-</p>
-</div>
     
-<div align="left"> 
+<div id="poem" style="padding-left:10%;"> 
 <p>The CIFRA institute is the place to be <br>at <a href="https://cs.unibocconi.eu/" target="_blank">Bocconi University</a> in Milan Italy <br>if you ain't been there already you come and see</p>
 
 <p>if your security is too sustained <br>the people at CIFRA will make it fine-grained <br>cryptographers and physicists rule the day <br>when you're lost they'll show you the way</p>
@@ -371,11 +379,21 @@ li
 <p>Zecchina Mezard Trevisan and Parisi <br> I would have done it if it was so easy</p>
 </div>
 
+<div id="aboutid" >
+<p>
+    <center>
+    <a href="https://cs.unibocconi.eu/" target="_blank">
+    <img id="bocconilogo" src="images/Bocconi.png" width="90%" style="max-width:450px;">
+    <!-- <img style="border:2px solid var(--blue);" src="images/Bocconi.png" width="51%" height="51%" align="right">-->
+    </a>
+    </center>
+</p>
+</div>
 
 &nbsp;
 &nbsp;
 
-<p class="bottom-v">
+<p class="bottom-v" style="clear: left; padding-top:10px;">
 <figure class="second">
  <p><img src="images/LOGO-fondazione-cariplo.png" style="width: 150px" />
   &nbsp;
