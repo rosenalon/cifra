@@ -21,7 +21,7 @@ function time(){
 	var l = document.getElementById('line');
 	var d = new Date(), dref = new Date();
 	dref.setHours(9,0,0,0);
-	var order = ["coffee1","simona",	"giulio_m",	"coffee2",	"omri",	"eren", 	"lunch",	"chris",	"vinod",	"coffee3",	"damiano",		"dinner"];
+	var order = ["coffee1","damiano",	"giulio_m",	"coffee2",	"andrej",	"rajendra", 	"lunch",	"miranda",	"vinod",	"coffee3",	"prashant",		"dinner"];
 	var times = [9, 		9.5, 		10.25, 		11, 		11.5, 	12.25, 		13, 		14.5, 		15.25,		15.75, 		16.5, 		 	20];
 	if(order.length != times.length){
 		alert("order length ("+order.length+") != times length ("+times.length+")");
