@@ -1,0 +1,153 @@
+/* Main body */
+div {
+	margin:auto;
+	max-width:1150px;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+/* The time line (the red one) */
+.line {
+	position:absolute;
+	border-top: 2px solid red;
+	width: 95px;
+}
+.papertitle{
+	font-size:14px;
+}
+
+/* Coffee breaks */
+.highlighted{
+	background: ##fffff2;
+	box-shadow: 0px 0px 20px 10px rgb(255, 255, 240);
+}
+.coffee {
+	/*background-color: #F4ECDD;*/
+  /*background: linear-gradient(187deg,   #F4ECDD,  97%, transparent),
+    url("coffee.png");*/
+
+	background-image: url("coffee.jpg");
+  background-size: 400px;
+	vertical-align: middle;
+	font-size: 16px;
+	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+}
+
+/* Lunch */
+.lunch{
+	background-image: url("pasta.jpg");
+    background-size: 250px;
+    height: 80px;
+	vertical-align: middle;
+	font-size: 16px;
+	box-shadow: 2px 2px -2px -2px rgb(100, 100, 100);
+}
+
+/* Dinner */
+.dinner {
+	background-image: url("pizza.jpg");
+    background-size: 300px;
+	vertical-align: middle;
+	height: 204px;
+	font-size: 16px;
+	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+}
+
+/* The empty space */
+.empty {
+	/*background-color: #F7F7F7;*/
+	border:0;
+	border-bottom: dashed #dddddd thin;
+}
+
+/* The abstract */
+.abstract {
+	cursor: pointer;
+}
+
+
+
+/* The leftmost column */
+.time {
+	position: absolute;
+	margin-left: -104px;
+	padding-top: 10px;
+	min-width: 90px;
+	width: 90px;
+	max-width: 90px;
+	text-align: right;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border:0;
+}
+
+/* Columns two and three */
+.montue {
+	min-width:  115px;
+	width: 		115px;
+	max-width:  115px;
+}
+
+
+/* Tables */
+table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    table-layout: fixed;
+    margin-left:100px;
+}
+
+td, tr {
+	height: 50px;
+}
+
+th {
+	height:20px;
+}
+
+td, th {
+	border:1px solid black;
+	padding: 5px;
+	text-align: center;
+	margin-top: 10px;
+	vertical-align: top;
+	min-width: 250px;
+	max-width: 320px;
+	word-wrap:break-word;
+	white-space: normal;
+	font-size: 13px;
+
+}
+
+th {
+	vertical-align: bottom;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	border-bottom: 2px solid;
+}
+
+/* The td for a talk/speaker */
+.speaker {
+	background: linear-gradient(#DCFEFA, 10%, #BADCE8);
+	text-align: left;
+	height: 156px;
+	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+}
+
+.speakername {
+	font-size:19px;
+}
+
+b.speaker {
+	font-size:14px;
+}
+
+.icon {
+	display:none;
+	font-size: 24px;
+}
