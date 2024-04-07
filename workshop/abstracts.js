@@ -1,6 +1,26 @@
 var abstracts = new Map();
 
 function init(){
+	abstracts.set("michael","");
+	abstracts.set("giuseppe","");
+	abstracts.set("keisuke","");
+	abstracts.set("giulio_b","");
+	abstracts.set("giulio_m","");
+	abstracts.set("song","");
+	abstracts.set("zohar","");
+	abstracts.set("johanni","");
+	abstracts.set("sueyeon","");
+	abstracts.set("cengiz","");
+	abstracts.set("ran","");
+	abstracts.set("guilhem","");
+	abstracts.set("yue","");
+	abstracts.set("matteo","");
+	abstracts.set("stephane","");
+	abstracts.set("florent","");
+	abstracts.set("matthieu","");
+	abstracts.set("marc","");
+	abstracts.set("federico","");
+	abstracts.set("moritz","");
 	abstracts.set("pravesh","");
 	abstracts.set("rajendra","");
 	abstracts.set("shuichi","");
@@ -11,7 +31,7 @@ function init(){
 	abstracts.set("afonso","");
 	abstracts.set("prashant","");
 	abstracts.set("vinod","I will describe two results at the interface of statistics and machine learning, and cryptography.<br><br>First, in the increasingly common setting where the training of models is outsourced, I will describe a method whereby a malicious trainer can use cryptography to insert an <i>undetectable</i> backdoor in a classifier. Using a secret key, the trainer can then slightly alter inputs to create large deviations in the model output. Without the secret key, the existence of the backdoor is hidden. This result relies on the recently formulated hardness of the continuous learning with errors (CLWE) problem.<br><br>Second, I will show that CLWE is as hard as the widely studied learning with errors (LWE) problem using techniques from leakage-resilient cryptography. In turn, I will use this to show the nearly optimal hardness of the long-studied Gaussian mixture learning problem.<br><br>Based on joint works with Shafi Goldwasser, Michael P. Kim and Or Zamir; and with Aparna Gupte and Neekon Vafa.");
-	abstracts.set("tim","");
+	abstracts.set("tim","I will present new results on when low coordinate degree functions (LCDF)—linear combinations of functions depending on small subsets of entries of a vector—can hypothesis test between high-dimensional probability measures. These functions are a generalization of the class of low degree polynomials (LDP) widely used in recent literature as a proxy for all efficient algorithms for tasks in statistics and average-case optimization. Though they are a more powerful class of algorithms, LCDF actually admit a much more general theoretical analysis than LDP. I will present two case studies on computational hardness by way of illustration.<br><br>First, I will show that &ldquo;channel universality&rdquo; holds for the success of LCDF in testing for the presence of random signals through noisy channels: the efficacy of LCDF depends on the channel only through a single scalar parameter for a class of channels including nearly arbitrary i.i.d. additive noise and nearly arbitrary exponential families. As a concrete application, I will show that the well-known computationally hard regimes and statistical-to-computational gaps in the spiked matrix and tensor models under additive Gaussian noise are actually universal phenomena, occurring under a wide range of observation models.<br><br>Second, I will give an analysis of testing categorical signals and observations, covering for instance problems over finite groups and stochastic block models observed through different types of interactions between network nodes. LDP usually are not even defined for such problems—what is a polynomial of an element of an abstract group or of &ldquo;red, green, or blue&rdquo;?—but LCDF are easily made sense of in such settings. I will give a unified treatment of a broad class of such problems and discuss examples including community detection and group synchronization.");
 	abstracts.set("pravesh","");
 	abstracts.set("chris","We present a new way to analyze first-order iterative algorithms including power iteration, belief propagation and Approximate Message Passing (AMP), and many forms of gradient descent using <i>combinatorial diagrams</i>, assuming that the input is a random symmetric matrix with i.i.d. mean-0 variance-1 entries. Each diagram is a small graph, and the operations of the algorithm correspond to simple combinatorial operations on these graphs. The diagrams are derived in a generic way, by symmetry-reducing a Fourier basis. <br><br>We prove a fundamental property of the diagrams: asymptotically, we can discard all of the diagrams except for the trees. The mechanics of first-order algorithms simplify dramatically as the algorithmic operations have particularly simple and interpretable effects on the trees. We further show that the tree-shaped diagrams are essentially a basis of <i>asymptotically independent Gaussian vectors</i>.<br><br>The tree approximation property mirrors the assumption of the <i>cavity method</i>, a 40-year-old non-rigorous technique in statistical physics which has served as one of the most fundamental techniques in the field. We demonstrate the connection with the cavity method by implementing heuristic physics derivations into rigorous proofs. We rigorously establish that belief propagation is asymptotically equal to its associated AMP algorithm and we give a new simple proof of the state evolution formula for AMP. Our proofs use straightforward combinatorial arguments akin to the trace method from random matrix theory.<br><br>Based on joint work with Lucas Pesenti.");
 	abstracts.set("miranda","We construct pseudorandom error-correcting codes (or simply pseudorandom codes), which are error-correcting codes with the property that any polynomial number of codewords are pseudorandom to any computationally-bounded adversary. Efficient decoding of corrupted codewords is possible with the help of a decoding key.<br><br>We build pseudorandom codes that are robust to substitution and deletion errors, where pseudorandomness rests on standard cryptographic assumptions. Specifically, pseudorandomness is based on either \\(2^{O(\\sqrt{n})}\\)-hardness of LPN, or polynomial hardness of LPN and the planted XOR problem at low density. <br><br>As our primary application of pseudorandom codes, we present an undetectable watermarking scheme for outputs of language models that is robust to cropping and a constant rate of random substitutions and deletions. The watermark is undetectable in the sense that any number of samples of watermarked text are computationally indistinguishable from text output by the original model. This is the first undetectable watermarking scheme that can tolerate a constant rate of errors.<br><br>Our second application is to steganography, where a secret message is hidden in innocent-looking content. We present a constant-rate stateless steganography scheme with robustness to a constant rate of substitutions. Ours is the first stateless steganography scheme with provable steganographic security and any robustness to errors.<br><br>This is joint work with Sam Gunn.");
