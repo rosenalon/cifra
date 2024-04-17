@@ -21,8 +21,8 @@ function time(){
 	var l = document.getElementById('line');
 	var d = new Date(), dref = new Date();
 	dref.setHours(9,0,0,0);
-	var order = ["coffee1","simona",	"giulio_m",	"coffee2",	"omri",	"eren", 	"lunch",	"chris",	"vinod",	"coffee3",	"damiano",		"dinner"];
-	var times = [9, 		9.5, 		10.25, 		11, 		11.5, 	12.25, 		13, 		14.5, 		15.25,		15.75, 		16.5, 		 	20];
+	var order = ["coffee1","giulio_b",	"stephane",	"coffee2",	"matthieu",	"florent", 	"lunch",	"zohar",	"song",	"coffee3",	"yue", "sueyeon",		"dinner"];
+	var times = [9, 		9.5, 		10.25, 		11, 		11.5, 	12.25, 		13, 		14.5, 		15.25,		15.75, 		16.5, 	 17.25,	     	20];
 	if(order.length != times.length){
 		alert("order length ("+order.length+") != times length ("+times.length+")");
 	}
@@ -39,9 +39,9 @@ function time(){
 		}
 		// evil hacks to calibrate the line (hopefully it works in other browsers than chrome)
 		var y_pos;
-		if(hrs < 17.25 - 9){
-			if(hrs >= 16.5 - 9){
-				var elem = document.getElementById("td_damiano");
+		if(hrs < 18 - 9){
+			if(hrs >= 17.25 - 9){
+				var elem = document.getElementById("td_sueyeon");
 				var y_top = 5+elem.getBoundingClientRect().top - document.body.getBoundingClientRect().top,
 				dy = elem.getBoundingClientRect().bottom - y_top  - document.body.getBoundingClientRect().top;
 				y_pos = y_top + (hrs + 9 - 16.5) / 0.75 * dy; 
@@ -52,7 +52,7 @@ function time(){
 				y_pos = y_top + (hrs + 9 - times[i_-1]) / (times[i_] - times[i_-1]) * dy;
 			}
 		} else if(hrs < (20 - 9)) {
-			var y_top = document.getElementById("td_damiano").getBoundingClientRect().bottom - document.body.getBoundingClientRect().top,
+			var y_top = document.getElementById("td_sueyeon").getBoundingClientRect().bottom - document.body.getBoundingClientRect().top,
 			    y_bottom = 5+document.getElementById("td_dinner").getBoundingClientRect().top - document.body.getBoundingClientRect().top;
 			y_pos = y_top + (y_bottom - y_top) * ((hrs - (17.25 - 9)) / (20-17.25));
 		} else  {

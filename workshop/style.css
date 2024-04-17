@@ -1,7 +1,7 @@
 /* Main body */
 div {
 	margin:auto;
-	max-width:1150px;
+	max-width:1200px;
 }
 
 body {
@@ -53,6 +53,26 @@ body {
 	vertical-align: middle;
 	height: 204px;
 	font-size: 16px;
+	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+}
+
+/* collab */
+.collab {
+	background-image: url("collab.jpg");
+    background-size: 520px;
+	vertical-align: middle;
+	font-size: 16px;
+	height: 204px;
+	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+}
+
+/* aperitivo */
+.aperitivo {
+	background-image: url("spritz.jpg");
+    background-size: 300px;
+	vertical-align: middle;
+	font-size: 16px;
+	height: 204px;
 	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
 }
 
