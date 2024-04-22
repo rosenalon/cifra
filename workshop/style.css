@@ -8,12 +8,16 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-
 /* The time line (the red one) */
 .line {
 	position:absolute;
-	border-top: 2px solid red;
+	border-top: 2px solid black;
 	width: 95px;
+	box-shadow: 0px 0px 20px 10px rgb(255, 255, 255);
+}
+.currenttime{
+	position:absolute;
+	margin-left:-50px;
 }
 .papertitle{
 	font-size:14px;
@@ -85,7 +89,6 @@ body {
 
 /* The abstract */
 .abstract {
-	cursor: pointer;
 }
 
 
@@ -153,6 +156,7 @@ th {
 
 /* The td for a talk/speaker */
 .speaker {
+	cursor: pointer;
 	background: linear-gradient(#DCFEFA, 10%, #BADCE8);
 	text-align: left;
 	height: 156px;
@@ -170,4 +174,9 @@ b.speaker {
 .icon {
 	display:none;
 	font-size: 24px;
+}
+
+.oneandahalf {
+	height: 246px;
+	padding-top: 10px;
 }

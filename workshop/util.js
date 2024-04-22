@@ -4,6 +4,10 @@ function htmlDecode(input) {
 }
 
 function abstract(x){
+  	event = event || window.event;
+  	var source = event.target || event.srcElement;
+  	if(source.tagName === "A" || source.tagName === "I")
+		return true;
 	var arrow = document.getElementById("arrow_"+x);
 	var body = document.getElementById("body_"+x);
 	if(arrow.innerHTML == htmlDecode("&#9654;")){
@@ -15,11 +19,27 @@ function abstract(x){
 	}
 	MathJax.typeset();
 	time();
+	return true;
+}
+function timeNow() {
+  var d = convertTZ(new Date(),"Europe/Rome"),
+    h = (d.getHours()<10?'0':'') + d.getHours(),
+    m = (d.getMinutes()<10?'0':'') + d.getMinutes();
+    return h + ':' + m;
+}
+
+/* deal with time zones */
+function convertTZ(date, tzString) {
+    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
 }
 
 function time(){
 	var l = document.getElementById('line');
-	var d = new Date(), dref = new Date();
+	var c = document.getElementById('clock');
+	var d = convertTZ(new Date(),"Europe/Rome"), dref = convertTZ(new Date(),"Europe/Rome");
+
+	c.innerHTML = timeNow();
+
 	dref.setHours(9,0,0,0);
 	var order = ["coffee1","giulio_b",	"stephane",	"coffee2",	"matthieu",	"florent", 	"lunch",	"zohar",	"song",	"coffee3",	"yue", "sueyeon",		"dinner"];
 	var times = [9, 		9.5, 		10.25, 		11, 		11.5, 	    12.25, 		13, 		14.5, 		15.25,		15.75, 		16.5, 	 17.25,	     	20];
@@ -61,9 +81,12 @@ function time(){
 				dy = elem.getBoundingClientRect().bottom - y_top  - document.body.getBoundingClientRect().top;
 			y_pos = y_top + (hrs + 9 - 20) / (22 - 20) * dy;
 		}
+		c.style.top = (y_pos-8)+"px";
 		l.style.top = y_pos+"px";
+		c.style.display="block";
 		l.style.display="block";
 	} else {
 		l.style.display="none";
+		c.style.display="none";
 	}
 }
