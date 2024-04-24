@@ -3,23 +3,36 @@ function htmlDecode(input) {
   	return doc.documentElement.textContent;
 }
 
+function remove_empty_abstracts(){
+	var itms = document.getElementsByClassName("abstract");
+	for(var i=0; i<itms.length; i++){
+		itm = itms[i];
+		var id = itm.id.substring(itm.id.indexOf("_")+1);
+		if(!abstracts.get(id)){
+			itm.innerHTML = "";
+		}
+	}
+}
+
 function abstract(x){
   	event = event || window.event;
   	var source = event.target || event.srcElement;
   	if(source.tagName === "A" || source.tagName === "I")
 		return true;
-	var arrow = document.getElementById("arrow_"+x);
-	var body = document.getElementById("body_"+x);
-	if(arrow.innerHTML == htmlDecode("&#9654;")){
-		body.innerHTML = abstracts.get(x);
-		arrow.innerHTML = "&#9660;";
-	} else {
-		arrow.innerHTML = "&#9654;";
-		body.innerHTML = "";
-	}
-	MathJax.typeset();
-	time();
-	return true;
+		var arrow = document.getElementById("arrow_"+x);
+		if(arrow){
+			var body = document.getElementById("body_"+x);
+			if(arrow.innerHTML == htmlDecode("&#9654;")){
+				body.innerHTML = abstracts.get(x);
+				arrow.innerHTML = "&#9660;";
+			} else {
+				arrow.innerHTML = "&#9654;";
+				body.innerHTML = "";
+			}
+			MathJax.typeset();
+			time();
+		}
+		return true;
 }
 function timeNow() {
   var d = convertTZ(new Date(),"Europe/Rome"),
