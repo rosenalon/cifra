@@ -15,16 +15,16 @@ body {
 	width: 95px;
 	box-shadow: 0px 0px 20px 10px rgb(255, 255, 255);
 }
-.currenttime{
+.currenttime {
 	position:absolute;
 	margin-left:-50px;
 }
-.papertitle{
+.papertitle {
 	font-size:14px;
 }
 
 /* Coffee breaks */
-.highlighted{
+.highlighted {
 	background: ##fffff2;
 	box-shadow: 0px 0px 20px 10px rgb(255, 255, 240);
 }
@@ -41,7 +41,7 @@ body {
 }
 
 /* Lunch */
-.lunch{
+.lunch {
 	background-image: url("pasta.jpg");
     background-size: 250px;
     height: 80px;
@@ -158,7 +158,7 @@ th {
 .speaker {
 	cursor: pointer;
 	background: linear-gradient(#DCFEFA, 10%, #BADCE8);
-	text-align: left;
+	text-align: justify;
 	height: 156px;
 	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
 }
