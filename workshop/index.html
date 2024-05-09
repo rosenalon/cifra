@@ -1,490 +1,688 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <noscript>
+      <style>
+        form.antibot * :not(.antibot-message) {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://rosenalon.github.io/cifra/workshop/" />
+    <meta property="og:site_name" content="Department of Decision Sciences" />
+    <meta property="og:url" content="https://rosenalon.github.io/cifra/workshop/" />
+    <meta property="og:title" content="Bocconi May Workshop" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <script src="/sites/default/files/google_tag/default/google_tag.script.js?VersionId=BOS5Sl2eAmcWpLmZC3AEu0de4zM8JwTB?scd9mp" defer></script>
+    <title>Bocconi May Workshop | Department of Decision Sciences</title>
+    <link rel="stylesheet" media="all" href="bocconi-example2.css" />
+    <link rel="stylesheet" media="all" href="bocconi-example.css" />
+    <link rel="stylesheet" media="all" href="fonts.css" />
 
-	<head>
-		<title>Bocconi May Workshop on Average-Case Computation</title>
-	</head>
+    <!-- MathJax for rendering TeX -->
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
 
-	<!-- MathJax for rendering TeX -->
-	<script type="text/javascript" id="MathJax-script" async
-	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-	</script>
+    <!-- Defines all the abstracts -->
+    <script type="text/javascript" src="abstracts.js">
+    </script>
 
-	<!-- Defines all the abstracts -->
-	<script type="text/javascript" src="abstracts.js">
-	</script>
+    <!-- Utility functions -->
+    <script type="text/javascript" src="util.js">
+    </script>
 
-	<!-- Utility functions -->
-	<script type="text/javascript" src="util.js">
-	</script>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lang-en section-research path-node is-node-page is-node-page--internal-page" onload="init();remove_empty_abstracts();time();setInterval(time, 10000);">
+    <a href="#main-content" class="visually-hidden focusable"> Skip to main content </a>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF7R5FT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <header class="site-header fixed-header" role="banner" aria-label="Site header">
+        <div class="site-header__navbar navbar navbar-dark navbar-expand-xl container">
+          <nav class="navbar-brand__wrapper">
+            <a class="site__logo logo navbar-brand" href="https://www.unibocconi.eu/" target="_blank" title="unibocconi.eu" rel="external">
+              <img src="logo.svg" alt="Bocconi" class="logo__image" />
+            </a>
+            <span class="site__name name">Department of Decision Sciences</span>
+          </nav>
+          <button class="search-toggler search-toggler-main" type="button" data-bs-toggle="collapse" data-bs-target="#searchCollapsibleContent" aria-expanded="false" aria-controls="searchCollapsibleContent" aria-label="Toggle search form">
+            <span class="bi bi-search"></span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsibleContent" aria-controls="navbarCollapsibleContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-open-icon"></span>
+          </button>
+          <div id="navbarCollapsibleContent" class="navbar-main navbar-collapse collapse">
+            <div class="navbar-collapse__container">
+              <div class="navbar-close-wrapper">
+                <button class="navbar-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsibleContent" aria-controls="navbarCollapsibleContent" aria-expanded="false" aria-label="Close navigation">
+                  <span class="bi bi-x"></span>
+                </button>
+              </div>
+              <nav role="navigation" aria-labelledby="block-bocconi-departments-main-menu-menu" id="block-bocconi-departments-main-menu" class="block-bocconi-departments-main-menu">
+                <div class="block-title visually-hidden h2" id="block-bocconi-departments-main-menu-menu">Main navigation</div>
+                <ul data-block-id="bocconi_departments_main_menu" class="nav navbar-nav menu--main">
+                  <li class="nav-item">
+                    <a href="https://dec.unibocconi.eu/" class="nav-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                  </li>
+                  <li class="nav-item menu-item--collapsed">
+                    <a href="https://dec.unibocconi.eu/research" class="nav-link" data-drupal-link-system-path="node/2">Research</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://dec.unibocconi.eu/future-events" class="nav-link" data-drupal-link-system-path="node/3">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://dec.unibocconi.eu/latest-news-department" class="nav-link" data-drupal-link-system-path="node/1601">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://dec.unibocconi.eu/people" class="nav-link" data-drupal-link-system-path="node/5">People</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://dec.unibocconi.eu/about" class="nav-link" data-drupal-link-system-path="node/6">About</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="searchCollapsibleContent" class="search-main collapse">
+          <div class="container">
+            <div class="views-exposed-form block-exposedformsearchsearch block block--views block--views-exposed-filter-blocksearch-search" data-drupal-selector="views-exposed-form-search-search" id="block-exposedformsearchsearch">
+              <form action="/search" method="get" id="views-exposed-form-search-search" accept-charset="UTF-8" class="form form--views_exposed_form container">
+                <div class="row">
+                  <div class="form-item form-item--search-api-fulltext form-item--textfield js-form-item js-form-item--search-api-fulltext js-form-type-textfield form-group col-12">
+                    <input placeholder="Search site..." data-drupal-selector="edit-search-api-fulltext" type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-control" />
+                  </div>
+                  <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper col-12" id="edit-actions">
+                    <input data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="" class="button js-form-submit form-submit btn btn-primary" />
+                  </div>
+                  <button class="search-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#searchCollapsibleContent" aria-expanded="false" aria-controls="searchCollapsibleContent">
+                    <span class="search_toggler__text">Cancel</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container messages">
+        <div data-drupal-messages-fallback class="hidden"></div>
+      </div>
+      <div class="site-main">
+        <div class="row no-gutters">
+          <main class="main-content col ">
+            <a id="main-content"></a>
+            <!-- <div class="container">
+              <div class="breadcrumb__row">
+                <div class="breadcrumb__content">
+                  <nav role="navigation" aria-labelledby="system-breadcrumb">
+                    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb__item breadcrumb-item">
+                        <a href="/">Home</a>
+                      </li>
+                      <li class="breadcrumb__item breadcrumb-item">
+                        <a href="/research">Research</a>
+                      </li>
+                      <li class="breadcrumb__item breadcrumb-item">Extreme Value Analysis (EVA) 2023</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div> -->
 
-	<!-- Style sheet -->
-	<link rel="stylesheet" href="style.css">
+            <!-- begin main content -->
+            <article class="node node--internal-page node--vm-full node--internal-page-vm-full container">
+              <div class="ip">
+                <h2 class="node__title ip__title">
+                  <span>Conceptual Challenges in AI: from ML to Average-Case Computation and Cryptography</span>
+                </h2>
+                <div class="ip-listing"></div>
+                <div class="ip-content">
+                  <section class="c-text icon-triangle-right container component-entity">
+                    <div class="component-entity__row">
+                      <div class="component-entity__content">
+                        <div class="c-text__body field field--name-field-c-text-body field--type-text-long field--label-hidden field--component-entity-field-c-text-body field--item">
+                          <p><strong>To be held in Milan from 20<sup>th</sup> May 2024 to 24<sup>th</sup> May 2024</strong></p>
 
+                          <p>Welcome! The purpose of this workshop is to exchange ideas between AI, cryptography, average-case complexity, and statistical physics.
+                            We aim to bring together experts in these areas in order to share recent research and develop new connections between these important fields.
+                            We have scheduled a diverse set of talks ranging from learning dynamics of neural networks, to evidence of hardness for random optimization problems,
+                            to cryptographic applications of hard computational tasks. <strong>Check out the schedule below.</strong></p>
+              
+                          <!-- <h2>Program</h2> -->
+                          <p>All times are CEST (Central European Summer Time). Program subject to change.<br>
+                            Click on <b>&#9654; Abstract</b> to see the abstract for the corresponding talk (if available).<br>
+                            To see all days of the workshop, you may have to scroll left-to-right &harr;.</p>
+    
+                          <!-- <center style="margin-bottom:30px;margin-top:-15px; margin-left:-15px;"> -->
+                            <table id="schedule">
+                              <tr>
+                                <th class="time" style="border:0px;"></th>
+                                <th class="montue">Monday 20th May</th>
+                                <th class="montue">Tuesday 21th May</th>
+                                <th class="montue">Wednesday 22th May</th>
+                                <th class="montue">Thursday 23th May</th>
+                                <th class="montue">Friday 24th May</th>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>9:00 - 9:30</b></td>
+                                <td class="coffee" colspan=5 id="td_coffee1" title="9:00 - 9:30"><span class="icon">&#9749;</span> <i>Morning coffee</i></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>9:30 - 11:00</b></td>
+                                <td onclick="return abstract('giulio_b',this);" class="speaker oneandahalf" id="td_giulio_b" rowspan=3 title="9:30 - 10:15">
+                                  <b><center><a href="https://www.lpens.ens.psl.eu/giulio-biroli/" class="speakername">Giulio Biroli</a></b><br>
+                                  <i class="affiliation">ENS Paris</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Dynamical Regimes of Diffusion Models</span><br>
+                                  <a href="https://arxiv.org/abs/2402.18491"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_giulio_b"><b><span id="arrow_giulio_b" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_giulio_b"></span>
+                                </td>
+                                <td onclick="return abstract('giulio_m');" class="speaker oneandahalf" id="td_giulio_m" rowspan=3 title="9:30 - 10:15">
+                                  <b><center><a href="https://sites.google.com/view/giuliomalavolta/" class="speakername">Giulio Malavolta</a></b><br>
+                                  <i>Bocconi University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_giulio_m"><b><span id="arrow_giulio_m" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_giulio_m"></span>
+                                </td>
+                                <td onclick="return abstract('matteo');" class="speaker oneandahalf" id="td_matteo" rowspan=3 title="9:30 - 10:15">
+                                  <b><center><a href="https://www.ictp.it/member/matteo-marsili" class="speakername">Matteo Marsili</a></b><br>
+                                  <i>ICTP</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_matteo"><b><span id="arrow_matteo" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_matteo"></span>
+                                </td>
+                                <td onclick="return abstract('simona');" class="speaker" id="td_simona" rowspan=2 title="9:30 - 10:00">
+                                  <b><center><a href="https://samardjiska.org/" class="speakername">Simona Samardjiska</a></b><br>
+                                  <i>Radboud University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Theoretical and Practical Hardness of Some Equivalence Problems</span><br><br>
+                                  <span class="abstract" id="abstract_simona"><b><span id="arrow_simona" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_simona"></span>
+                                </td>
+                                <td onclick="return abstract('damiano');" class="speaker" id="td_damiano" rowspan=2 title="9:30 - 10:00">
+                                  <b><center><a href="https://damianoabram.github.io/" class="speakername">Damiano Abram</a></b><br>
+                                  <i>Aarhus University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Cryptography from Planted Graphs: Security with Logarithmic-Size Messages</span><br>
+                                  <a href="https://eprint.iacr.org/2023/1929"><i>eprint</i></a><br><br>
+                                  <span class="abstract"  id="abstract_damiano"><b><span id="arrow_damiano" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_damiano"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('shuichi');" class="speaker" id="td_shuichi" rowspan=2 title="10:00 - 10:30">
+                                  <b><center><a href="https://researchmap.jp/shuichi.hirahara/?lang=english" class="speakername">Shuichi Hirahara</a></b><br>
+                                  <i>National Institute of Informatics</i></center><br>
+                                          <span class="papertitle"><b>Title:</b><br>One-Way Functions and Zero Knowledge<br><a href="https://eccc.weizmann.ac.il/report/2024/063/"><i>eccc</i></a></span><br><br>
+                                  <span class="abstract" id="abstract_shuichi"><b><span id="arrow_shuichi" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_shuichi"></span>
+                                </td>
+                                <td onclick="return abstract('ran');" class="speaker" id="td_ran" rowspan=2 title="10:00 - 10:30">
+                                  <b><center><a href="https://www.bu.edu/cs/profiles/ran-canetti/" class="speakername">Ran Canetti</a></b><br>
+                                  <i>Boston University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Towards General-Purpose Program Obfuscation via Local Mixing</span><br> <a href="https://eprint.iacr.org/2024/006"><i>eprint</i></a><br><br>
+                                  <span class="abstract" id="abstract_ran"><b><span id="arrow_ran" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_ran"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('cengiz');" class="speaker oneandahalf" id="td_cengiz" rowspan=3 title="10:15 - 11:00">
+                                  <b><center><a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" class="speakername">Cengiz Pehlevan</a></b><br>
+                                  <i>Harvard University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> A Dynamical Model of Neural Scaling Laws</span><br>
+                                  <a href="https://arxiv.org/abs/2402.01092"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_cengiz"><b><span id="arrow_cengiz" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_cengiz"></span>
+                                </td>
+                                <td onclick="return abstract('keisuke');" class="speaker oneandahalf" id="td_keisuke" rowspan=3 title="10:15 - 11:00">
+                                  <b><center><a href="https://quantphys.org/keisukefujii/" class="speakername">Keisuke Fujii</a></b><br>
+                                  <i>Osaka University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Quantum Machine Learning: Interplay between Implicit and Explicit Quantum Models</span><br>
+                                  <a href="https://indico.phys.nthu.edu.tw/event/101/contributions/90/contribution.pdf"><i>pdf</i></a><br><br>
+                                  <span class="abstract" id="abstract_keisuke"><b><span id="arrow_keisuke" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_keisuke"></span>
+                                </td>
+                                <td onclick="return abstract('guilhem');" class="speaker oneandahalf" id="td_guilhem" rowspan=3 title="10:15 - 11:00">
+                                  <b><center><a href="https://www.phys.ens.fr/~guilhem/" class="speakername">Guilhem Semerjian</a></b><br>
+                                  <i>LPT-ENS</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Matrix Denoising via Low-Degree Polynomials</span><br>
+                                  <a href="https://arxiv.org/abs/2402.16719"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_guilhem"><b><span id="arrow_guilhem" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_guilhem"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('rajendra');" class="speaker" id="td_rajendra" rowspan=2 title="10:30 - 11:00">
+                                  <b><center><a href="https://sites.google.com/view/rajendrak/home" class="speakername">Rajendra Kumar</a></b><br>
+                                  <i>IIT Delhi</i></center><br>
+                                  <b>Title:</b><br> Fine-Grained Hardness of Lattice Problems<br><br>
+                                  <span class="abstract" id="abstract_rajendra"><b><span id="arrow_rajendra" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_rajendra"></span>
+                                </td>
+                                <td onclick="return abstract('miranda');" class="speaker" id="td_miranda" rowspan=2 title="10:30 - 11:00">
+                                  <b><center><a href="https://www.cs.columbia.edu/~mchrist/" class="speakername">Miranda Christ</a></b><br>
+                                  <i>Columbia University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Pseudorandom Error-Correcting Codes</span><br>
+                                  <a href="https://eprint.iacr.org/2024/235"><i>eprint</i></a><br><br>
+                                  <span class="abstract" id="abstract_miranda"><b><span id="arrow_miranda" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_miranda"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>11:00 - 11:30</b></td>
+                                <td class="coffee" colspan=5 id="td_coffee2" title="11:00 - 11:30"><span class="icon">&#9749;</span> <i>Coffee break</i></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>11:30 - 13:00</b></td>
+                                <td onclick="return abstract('matthieu');" class="speaker oneandahalf" id="td_matthieu" rowspan=3 title="11:30 - 12:15">
+                                  <b><center><a href="https://www.epfl.ch/labs/pcsl/prof-matthieu-wyart/" class="speakername">Matthieu Wyart</a></b><br>
+                                  <i>EPFL</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Learning and Generating Compositional Data</span><br><br>
+                                  <span class="abstract" id="abstract_matthieu"><b><span id="arrow_matthieu" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_matthieu"></span>
+                                </td>
+                                <td onclick="return abstract('giuseppe');" class="speaker oneandahalf" id="td_giuseppe" rowspan=3 title="11:30 - 12:15">
+                                  <b><center><a href="https://people.epfl.ch/giuseppe.carleo?lang=en" class="speakername">Giuseppe Carleo</a></b><br>
+                                  <i>EPFL</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Neural Simulation of Quantum Many-Body Physics</span><br><br>
+                                  <span class="abstract" id="abstract_giuseppe"><b><span id="arrow_giuseppe" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_giuseppe"></span>
+                                </td>
+                                <td onclick="return abstract('marc');" class="speaker oneandahalf" id="td_marc" rowspan=3 title="11:30 - 12:15">
+                                  <b><center><a href="https://www.di.ens.fr/~lelarge/" class="speakername">Marc Lelarge</a></b><br>
+                                  <i>INRIA and ENS</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Chaining Graph Neural Networks for Combinatorial Optimization: Learning Graph Matching</span><br><br>
+                                  <span class="abstract" id="abstract_marc"><b><span id="arrow_marc" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_marc"></span>
+                                </td>
+                                <td onclick="return abstract('yuval');" class="speaker" id="td_yuval" rowspan=2 title="11:30 - 12:00">
+                                  <b><center><a href="https://yuvali.cswp.cs.technion.ac.il/" class="speakername">Yuval Ishai</a></b><br>
+                                  <i>Technion - Israel Institute of Technology</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Low-Complexity Cryptography</span><br><br>
+                                  <span class="abstract" id="abstract_yuval"><b><span id="arrow_yuval" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_yuval"></span>
+                                </td>
+                                <td onclick="return abstract('andrej');" class="speaker" id="td_andrej" rowspan=2 title="11:30 - 12:00">
+                                  <b><center><a href="https://andrejb.net/" class="speakername">Andrej Bogdanov</a></b><br>
+                                  <i>University of Ottawa</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Hardness Versus Randomness for Statistical Inference</span><br><br>
+                                  <span class="abstract" id="abstract_andrej"><b><span id="arrow_andrej" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_andrej"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                          
+                                <td onclick="return abstract('pravesh');" class="speaker" id="td_pravesh" rowspan=2 title="12:00 - 12:30">
+                                  <b><center><a href="https://www.cs.princeton.edu/~kothari/" class="speakername">Pravesh K. Kothari</a></b><br>
+                                  <i>Princeton University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_pravesh"><b><span id="arrow_pravesh" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_pravesh"></span>
+                                </td>
+                          
+                                <td onclick="return abstract('ilias_d');" class="speaker" id="td_ilias_d" rowspan=2 title="12:00 - 12:30">
+                                  <b><center><a href="http://www.iliasdiakonikolas.org/" class="speakername">Ilias Diakonikolas</a></b><br>
+                                  <i>UW Madison</i></center><br>
+                                  <b>Title:</b><br> Non-Gaussian Component Analysis and its Applications<br><br>
+                                  <span class="abstract" id="abstract_ilias_d"><b><span id="arrow_ilias_d" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_ilias_d"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('florent');" class="speaker oneandahalf" id="td_florent" rowspan=3 title="12:15 - 13:00">
+                                  <b><center><a href="https://florentkrzakala.com/" class="speakername">Florent Krzakala</a></b><br>
+                                  <i>EPFL</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_florent"><b><span id="arrow_florent" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_florent"></span>
+                                </td>
+                                <td onclick="return abstract('michael');" class="speaker oneandahalf" id="td_michael" rowspan=3 title="12:15 - 13:00">
+                                  <b><center><a href="https://qi.rub.de/walter" class="speakername">Michael Walter</a></b><br>
+                                  <i>Ruhr University Bochum</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Trading Space for Time in Nonlocal Games</span><br><a href="https://arxiv.org/abs/2402.17301"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_michael"><b><span id="arrow_michael" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_michael"></span>
+                                </td>
+                          
+                                <td onclick="return abstract('chris');" class="speaker oneandahalf" id="td_chris" rowspan=3 title="12:15 - 13:00">
+                                  <b><center><a href="https://chrisjones.space/" class="speakername">Chris Jones</a></b><br>
+                                  <i>Bocconi University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br>Diagram Analysis of Iterative Algorithms</span><br>
+                                  <a href="https://arxiv.org/abs/2404.07881"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_chris"><b><span id="arrow_chris" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_chris"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('eren');" class="speaker" id="td_eren" rowspan=2 title="12:30 - 13:00">
+                                  <b><center><a href="https://www.eren-kizildag.com/" class="speakername">Eren C. K&#305;z&#305;lda&#287;</a></b><br>
+                                  <i>Columbia University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Statistical-Computational Tradeoffs in Random Optimization Problems</span><br><br>
+                                  <span class="abstract" id="abstract_eren"><b><span id="arrow_eren" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_eren"></span>
+                                </td>
+                          
+                                <td onclick="return abstract('ilias_z');" class="speaker" id="td_ilias_z" rowspan=2 title="12:30 - 13:00">
+                                  <b><center><a href="https://iliaszadik.github.io/" class="speakername">Ilias Zadik</a></b><br>
+                                  <i>Yale University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_ilias_z"><b><span id="arrow_ilias_z" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_ilias_z"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time" title="13:00 - 14:30"><b>13:00 - 14:30</b></td>
+                                <td colspan=5 class="lunch" id="td_lunch"><span class="highlighted"><span class="icon">&#127837;</span> Lunch</span></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>14:30 - 16:00</b></td>
+                                <td onclick="return abstract('zohar');" class="speaker oneandahalf" id="td_zohar" rowspan=3 title="14:30 - 15:15">
+                                  <b><center><a href="http://old.phys.huji.ac.il/~zohar.ringel/" class="speakername">Zohar Ringel</a></b><br>
+                                  <i>The Hebrew University of Jerusalem</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Some Advancements in GP Theory with Applications to Language Models</span><br><br>
+                                  <span class="abstract" id="abstract_zohar"><b><span id="arrow_zohar" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_zohar"></span>
+                                </td>
+                                <td onclick="return abstract('stephane');" class="speaker oneandahalf" id="td_stephane" rowspan=3 title="14:30 - 15:15">
+                                  <b><center><a href="https://www.di.ens.fr/~mallat/mallat.html" class="speakername">Stephane Mallat</a></b><br>
+                                  <i>ENS Paris</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Approximation and Generalisation by Score Diffusion and Renormalisation Group</span><br><br>
+                                  <span class="abstract" id="abstract_stephane"><b><span id="arrow_stephane" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_stephane"></span>
+                                </td>
+                                <td onclick="return abstract('nobutaka');" class="speaker" id="td_nobutaka" rowspan=2 title="14:30 - 15:00">
+                                  <b><center><a href="https://sites.google.com/view/nobutaka-shimizu/home" class="speakername">Nobutaka Shimizu</a></b><br>
+                                  <i>Tokyo Institute of Technology</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Hardness Amplification for Planted Clique Problem</span><br>
+                                  <a href="https://eccc.weizmann.ac.il/report/2023/026/"><i>eccc</i></a><br><br>
+                                  <span class="abstract" id="abstract_nobutaka"><b><span id="arrow_nobutaka" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_nobutaka"></span>
+                                </td>
+                                <td onclick="return abstract('tim');" class="speaker" id="td_tim" rowspan=2 title="14:30 - 15:00">
+                                  <b><center><a href="http://www.kunisky.com/" class="speakername">Tim Kunisky</a></b><br>
+                                  <i>Yale University</i></i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br>Low Coordinate Degree Algorithms: A Flexible Framework for Computational Thresholds</span><br><a href="https://arxiv.org/abs/2403.07862"><i>arXiv</i></a><br><br>
+                                  <span class="abstract" id="abstract_tim"><b><span id="arrow_tim" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_tim"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('vinod');" class="speaker" id="td_vinod" rowspan=2 title="15:00 - 15:30">
+                                  <b><center><a href="https://people.csail.mit.edu/vinodv/" class="speakername">Vinod Vaikuntanathan</a></b><br>
+                                  <i>Massachusetts Institute of Technology</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Continuous Learning with Errors and Applications: Gaussian Mixtures and Undetectable Backdoors</span><br><br>
+                                  <span class="abstract" id="abstract_vinod"><b><span id="arrow_vinod" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_vinod"></span>
+                                </td>
+                                <td onclick="return abstract('afonso');" class="speaker" id="td_afonso" rowspan=2 title="15:00 - 15:30">
+                                  <b><center><a href="https://people.math.ethz.ch/~abandeira/" class="speakername">Afonso S. Bandeira</a></b><br>
+                                  <i>ETH Z&uuml;rich</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Spike Models, Free Probability, and the Kikuchi method for Tensor PCA</span><br><br>
+                                  <span class="abstract" id="abstract_afonso"><b><span id="arrow_afonso" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_afonso"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('song');" class="speaker oneandahalf" id="td_song" rowspan=3 title="15:15 - 16:00">
+                                  <b><center><a href="https://www.stat.berkeley.edu/~songmei/" class="speakername">Song Mei</a></b><br>
+                                  <i>UC Berkeley</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_song"><b><span id="arrow_song" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_song"></span>
+                                </td>
+                                <td onclick="return abstract('johanni');" class="speaker oneandahalf" id="td_johanni" rowspan=3 title="15:15 - 16:00">
+                                  <b><center><a href="https://people.epfl.ch/johanni.brea?lang=en" class="speakername">Johanni Brea</a></b><br>
+                                  <i>EPFL</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_johanni"><b><span id="arrow_johanni" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_johanni"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('federico');" class="speaker" id="td_federico" rowspan=2 title="15:30 - 16:00">
+                                  <b><center><a href="https://corsidilaurea.uniroma1.it/user/11810" class="speakername">Federico Ricci-Tersenghi</a></b><br>
+                                  <i>Sapienza Universit&agrave; di Roma</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> </span><br><br>
+                                  <span class="abstract" id="abstract_federico"><b><span id="arrow_federico" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_federico"></span>
+                                </td>
+                                <td onclick="return abstract('prashant');" class="speaker" id="td_prashant" rowspan=2 title="15:30 - 16:00">
+                                  <b><center><a href="https://www.comp.nus.edu.sg/~prashant/" class="speakername">Prashant Nalini Vasudevan</a></b><br>
+                                  <i>National University of Singapore</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br>Average-Case Complexity of Problems from Fine-Grained Complexity</span><br><br>
+                                  <span class="abstract" id="abstract_prashant"><b><span id="arrow_prashant" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_prashant"></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>16:00 - 16:30</b></td>
+                                <td class="coffee" colspan=5 id="td_coffee3" title="16:00 - 16:30"><span class="icon">&#9749;</span> <i>Coffee break</i></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>16:30 - 17:45</b></td>
+                                <td onclick="return abstract('yue');" class="speaker oneandahalf" id="td_yue" rowspan=3 title="16:30 - 17:15">
+                                  <b><center><a href="https://lu.seas.harvard.edu/" class="speakername">Yue M. Lu</a></b><br>
+                                  <i>Harvard University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_yue"><b><span id="arrow_yue" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_yue"></span>
+                                </td>
+                                <td onclick="return abstract('moritz');" class="speaker oneandahalf" id="td_moritz" rowspan=3 title="16:30 - 17:15">
+                                  <b><center><a href="https://www.fz-juelich.de/profile/helias_m" class="speakername">Moritz Helias</a></b><br>
+                                  <i>J&uuml;lich Research Centre, RWTH Aachen</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Critical feature learning in deep neural networks</span><br><br>
+                                  <span class="abstract" id="abstract_moritz"><b><span id="arrow_moritz" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_moritz"></span>
+                                </td>
+                                <td onclick="return abstract('omri');" class="speaker oneandahalf" id="td_omri" rowspan=3 title="16:30 - 17:15">
+                                  <b><center><a href="https://dblp.org/pid/243/6137.html" class="speakername">Omri Shmueli</a></b><br>
+                                  <i>Tel Aviv University, Weizmann University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> Quantum Algorithms in a Superposition of Spacetimes</span><br>
+                                  <a href="https://eccc.weizmann.ac.il/report/2024/050/"><i>eccc</i></a><br><br>
+                                  <span class="abstract" id="abstract_omri"><b><span id="arrow_omri" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_omri"></span>
+                                </td>
+                                <td class="collab" id="td_collab" rowspan=3 colspan=2 title="16:30 - 18:00"><span class="icon">&#127858;</span> Collaboration Time</td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                          
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                                <td onclick="return abstract('marc_m');" class="speaker" id="td_marc_m" rowspan=2 title="17:15 - 17:45">
+                                  <b><center><a href="https://www.marcmezard.fr/" class="speakername">Marc M&#233;zard</a></b><br>
+                                  <i>Bocconi University</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br>Discussion on the New Journal of Artificial Intelligence Theory</span><br><br>
+                                  <span class="abstract" id="abstract_marc"><b><span id="arrow_marc_m" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_marc_m"></span>
+                                </td>
+                                <td onclick="return abstract('sueyeon');" class="speaker oneandahalf" id="td_sueyeon" rowspan=3 title="17:15 - 18:00">
+                                  <b><center><a href="https://sites.google.com/site/sueyeonchung/" class="speakername">SueYeon Chung</a></b><br>
+                                  <i>NYU, Flatiron Institute</i></center><br>
+                                  <span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
+                                  <span class="abstract" id="abstract_sueyeon"><b><span id="arrow_sueyeon" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
+                                  <span id="body_sueyeon"></span>
+                                </td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b></b></td>
+                              </tr>
+                              <tr style="max-height:41px" >
+                                <td class="time"><b>17:45 - 18:00</b></td>
+                                <td class="aperitivo" id="td_aperitivo" rowspan=2 title="17:45 - 20:00"><span class="icon">&#127858;</span> Discussion and Aperitivo</td>
+                              </tr>
+                              <tr style="height:156px;">
+                                <td class="time"><b>18:00 - 20:00</b></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                              </tr>
+                              <tr>
+                                <td class="time"><b>20:00 - 22:00</b></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="dinner" id="td_dinner" title="20:00 - 22:00"><span class="icon">&#127858;</span> <span class="highlighted">Dinner for invited speakers</span></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                              </tr>
+                            </table>
+                            <div class="line" id="line" style="display:none;"></div>
+                              <span class="currenttime" id="clock"></span>
+                            <!-- </center> -->
 
-	<body onload="init();remove_empty_abstracts();time();setInterval(time, 10000);">
-		<div>
-			<br>
-			<div>
-				<span style="max-width:1000px">
-				<h1>Conceptual Challenges in AI: from ML to Average-Case Computation and Cryptography</h1>
-				<b>To be held in Milan from 20<sup>th</sup> May 2024 to 24<sup>th</sup> May 2024</b><br><br>
+                          <h3><strong>Attending</strong></h3>
+                          <p>The workshop is located in the Roentgen building at Bocconi University located at <br></b><a style="text-decoration: none;" href="https://maps.app.goo.gl/iVLzDMCJwaXyoUSd9">&#128205;</a>
+                          <a href="https://maps.app.goo.gl/iVLzDMCJwaXyoUSd9">Via Guglielmo R&ouml;ntgen 1, 20136 Milano, MI</a>.</p>
+                          <p><a style="text-decoration:none;" href="https://forms.unibocconi.it/index.php?rif_quest=3471">&#128221;</a> <a href="https://forms.unibocconi.it/index.php?rif_quest=3471">Click here to register for the workshop.</a></p>
+                      
+                          <p>Recommended hotels:</p>
+                          <ul>
+                          <li><a href="https://hoteldestemilano.it/">Hotel d'Este</a> (special price available)</li>
+                          <li><a href="https://www.gruppouna.it/unahotels/unahotels-mediterraneo-milano">UNAHOTELS Mediterraneo Milano</a></li>
+                          <li><a href="https://www.uptownpalace.com/">Uptown Palace</a></li>
+                          <li><a href="https://www.grandviscontipalace.com/">Grand Visconti Palace</a></li>
+                          </ul>
+                      
+                          <p>The workshop is being co-organized under the Physics and ML research pillar of the <a href="https://ellis.eu/">European Laboratory for Learning and Intelligent Systems</a> (ELLIS)
+                          and the <a href="https://rosenalon.github.io/cifra/">CIFRA Institute</a>. The workshop organizers are
+                          Nicolas Brunel, Chris Jones, Bert Kappen, Carlo Lucibello, Enrico Malatesta, Marc Mézard, Tamer Mour, Gabriele Perugini, Alon Rosen, Luca Saglietti,
+                          Nikolaj I. Schwartzbach, Sofia Vallecorsa, Riccardo Zecchina.</p>  
+                        </div>
+                        <div style="font-size:10px;"><i>Photos by Federica Ariemma, Bozhin Karaivanov, Amirali Mirhashemian, &#321;ukasz Rawa, and krakenimages on Unsplash.</i></span>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </article>
+            <div class="ip-prefooter"></div>
+          </main>
+        </div>
+      </div>
+      <!-- end main content -->
 
-                Welcome! The purpose of this workshop is to exchange ideas between AI, cryptography, average-case complexity, and statistical physics. We aim to bring together experts in these areas in order to share recent research and develop new connections between these important fields. We have scheduled a diverse set of talks ranging from learning dynamics of neural networks, to evidence of hardness for random optimization problems, to cryptographic applications of hard computational tasks. Check out the schedule below.<br><br>
-
-				The workshop is being co-organized under the Physics and ML research pillar of the <a href="https://ellis.eu/">European Laboratory for Learning and Intelligent Systems</a> (ELLIS) and the <a href="https://rosenalon.github.io/cifra/">CIFRA Institute</a>. The workshop organizers are Nicolas Brunel, Chris Jones, Bert Kappen, Carlo Lucibello, Enrico Malatesta, Marc Mézard, Tamer Mour, Gabriele Perugini, Alon Rosen, Luca Saglietti, Nikolaj I. Schwartzbach, Sofia Vallecorsa, Riccardo Zecchina.
-
-                
-				<h2>Attending</h2>
-                The workshop is located in the Roentgen building at Bocconi University located at <a style="text-decoration: none;" href="https://maps.app.goo.gl/iVLzDMCJwaXyoUSd9">&#128205;</a> <a href="https://maps.app.goo.gl/iVLzDMCJwaXyoUSd9">Via Guglielmo R&ouml;ntgen 1, 20136 Milano, MI</a>.<br><br>
-                <a href="https://forms.unibocconi.it/index.php?rif_quest=3471">&#128221; Click here to register for the workshop.</a><br><br>
-				Recommended hotels:
-				<ul>
-					<li><a href="https://hoteldestemilano.it/">Hotel d'Este</a> (special price available)</li>
-					<li><a href="https://www.gruppouna.it/unahotels/unahotels-mediterraneo-milano">UNAHOTELS Mediterraneo Milano</a></li>
-					<li><a href="https://www.uptownpalace.com/">Uptown Palace</a></li>
-					<li><a href="https://www.grandviscontipalace.com/">Grand Visconti Palace</a></li>
-				</ul>
-
-				<!--<h2>List of Speakers</h2>
-				Here is the list of confirmed speakers. For the full program, see below.
-				<ul>
-					<li>Damiano Abram</li>
-					<li>Afonso Bandeira</li>
-					<li>Andrej Bogdanov</li>
-					<li>Miranda Christ</li>
-					<li>Ilias Diakonikolas</li>
-					<li>Shuichi Hirahara</li>
-					<li>Yuval Ishai</li>
-					<li>Chris Jones</li>
-					<li>Eren C. K&#305;z&#305;lda&#287;</li>
-					<li>Pravesh K. Kothari</li>
-					<li>Rajendra Kumar</li>
-					<li>Tim Kunisky</li>
-					<li>Nobutaka Shimizu</li>
-					<li>Vinod Vaikuntanathan</li>
-					<li>Prashant Nalini Vasudevan</li>
-					<li>Ilias Zadik</li>
-				</ul>-->
-
-			</div>
-			<h2>Program</h2>
-			All times are indicated in CEST (Central European Summer Time). Program subject to change. <br><br>
-			Click on <b>&#9654; Abstract</b> to see the abstract for the corresponding talk (if available).<br><br>
-			To see all days of the workshop, you may have to scroll left-to-right &harr;.<br><br>
-			</span>
-			<center style="margin-bottom:30px;margin-top:-15px; margin-left:-15px;">
-			<table>
-				<tr>
-					<th class="time" style="border:0px;"></th>
-					<th class="montue">Monday 20th May</th>
-					<th class="montue">Tuesday 21th May</th>
-					<th class="montue">Wednesday 22th May</th>
-					<th class="montue">Thursday 23th May</th>
-					<th class="montue">Friday 24th May</th>
-				</tr>
-				<tr>
-					<td class="time"><b>9:00 - 9:30</b></td>
-					<td class="coffee" colspan=5 id="td_coffee1" title="9:00 - 9:30"><span class="icon">&#9749;</span> <i>Morning coffee</i></td>
-				</tr>
-				<tr>
-					<td class="time"><b>9:30 - 11:00</b></td>
-					<td onclick="return abstract('giulio_b',this);" class="speaker oneandahalf" id="td_giulio_b" rowspan=3 title="9:30 - 10:15">
-						<b><center><a href="https://www.lpens.ens.psl.eu/giulio-biroli/" class="speakername">Giulio Biroli</a></b><br>
-						<i>ENS Paris</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Dynamical Regimes of Diffusion Models</span><br>
-						<a href="https://arxiv.org/abs/2402.18491"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_giulio_b"><b><span id="arrow_giulio_b" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_giulio_b"></span>
-					</td>
-					<td onclick="return abstract('giulio_m');" class="speaker oneandahalf" id="td_giulio_m" rowspan=3 title="9:30 - 10:15">
-						<b><center><a href="https://sites.google.com/view/giuliomalavolta/" class="speakername">Giulio Malavolta</a></b><br>
-						<i>Bocconi University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_giulio_m"><b><span id="arrow_giulio_m" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_giulio_m"></span>
-					</td>
-					<td onclick="return abstract('matteo');" class="speaker oneandahalf" id="td_matteo" rowspan=3 title="9:30 - 10:15">
-						<b><center><a href="https://www.ictp.it/member/matteo-marsili" class="speakername">Matteo Marsili</a></b><br>
-						<i>ICTP</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_matteo"><b><span id="arrow_matteo" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_matteo"></span>
-					</td>
-					<td onclick="return abstract('simona');" class="speaker" id="td_simona" rowspan=2 title="9:30 - 10:00">
-						<b><center><a href="https://samardjiska.org/" class="speakername">Simona Samardjiska</a></b><br>
-						<i>Radboud University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Theoretical and Practical Hardness of Some Equivalence Problems</span><br><br>
-						<span class="abstract" id="abstract_simona"><b><span id="arrow_simona" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_simona"></span>
-					</td>
-					<td onclick="return abstract('damiano');" class="speaker" id="td_damiano" rowspan=2 title="9:30 - 10:00">
-						<b><center><a href="https://damianoabram.github.io/" class="speakername">Damiano Abram</a></b><br>
-						<i>Aarhus University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Cryptography from Planted Graphs: Security with Logarithmic-Size Messages</span><br>
-						<a href="https://eprint.iacr.org/2023/1929"><i>eprint</i></a><br><br>
-						<span class="abstract"  id="abstract_damiano"><b><span id="arrow_damiano" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_damiano"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('shuichi');" class="speaker" id="td_shuichi" rowspan=2 title="10:00 - 10:30">
-						<b><center><a href="https://researchmap.jp/shuichi.hirahara/?lang=english" class="speakername">Shuichi Hirahara</a></b><br>
-						<i>National Institute of Informatics</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_shuichi"><b><span id="arrow_shuichi" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_shuichi"></span>
-					</td>
-					<td onclick="return abstract('ran');" class="speaker" id="td_ran" rowspan=2 title="10:00 - 10:30">
-						<b><center><a href="https://www.bu.edu/cs/profiles/ran-canetti/" class="speakername">Ran Canetti</a></b><br>
-						<i>Boston University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Towards General-Purpose Program Obfuscation via Local Mixing</span><br> <a href="https://eprint.iacr.org/2024/006"><i>eprint</i></a><br><br>
-						<span class="abstract" id="abstract_ran"><b><span id="arrow_ran" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_ran"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('cengiz');" class="speaker oneandahalf" id="td_cengiz" rowspan=3 title="10:15 - 11:00">
-						<b><center><a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" class="speakername">Cengiz Pehlevan</a></b><br>
-						<i>Harvard University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> A Dynamical Model of Neural Scaling Laws</span><br>
-						<a href="https://arxiv.org/abs/2402.01092"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_cengiz"><b><span id="arrow_cengiz" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_cengiz"></span>
-					</td>
-					<td onclick="return abstract('keisuke');" class="speaker oneandahalf" id="td_keisuke" rowspan=3 title="10:15 - 11:00">
-						<b><center><a href="https://quantphys.org/keisukefujii/" class="speakername">Keisuke Fujii</a></b><br>
-						<i>Osaka University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Quantum Machine Learning: Interplay between Implicit and Explicit Quantum Models</span><br>
-						<a href="https://indico.phys.nthu.edu.tw/event/101/contributions/90/contribution.pdf"><i>pdf</i></a><br><br>
-						<span class="abstract" id="abstract_keisuke"><b><span id="arrow_keisuke" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_keisuke"></span>
-					</td>
-					<td onclick="return abstract('guilhem');" class="speaker oneandahalf" id="td_guilhem" rowspan=3 title="10:15 - 11:00">
-						<b><center><a href="https://www.phys.ens.fr/~guilhem/" class="speakername">Guilhem Semerjian</a></b><br>
-						<i>LPT-ENS</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Matrix Denoising via Low-Degree Polynomials</span><br>
-						<a href="https://arxiv.org/abs/2402.16719"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_guilhem"><b><span id="arrow_guilhem" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_guilhem"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('rajendra');" class="speaker" id="td_rajendra" rowspan=2 title="10:30 - 11:00">
-						<b><center><a href="https://sites.google.com/view/rajendrak/home" class="speakername">Rajendra Kumar</a></b><br>
-						<i>IIT Delhi</i></center><br>
-						<b>Title:</b><br> Fine-grained Hardness of Lattice Problems<br><br>
-						<span class="abstract" id="abstract_rajendra"><b><span id="arrow_rajendra" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_rajendra"></span>
-					</td>
-					<td onclick="return abstract('miranda');" class="speaker" id="td_miranda" rowspan=2 title="10:30 - 11:00">
-						<b><center><a href="https://www.cs.columbia.edu/~mchrist/" class="speakername">Miranda Christ</a></b><br>
-						<i>Columbia University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Pseudorandom Error-Correcting Codes</span><br>
-						<a href="https://eprint.iacr.org/2024/235"><i>eprint</i></a><br><br>
-						<span class="abstract" id="abstract_miranda"><b><span id="arrow_miranda" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_miranda"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b>11:00 - 11:30</b></td>
-					<td class="coffee" colspan=5 id="td_coffee2" title="11:00 - 11:30"><span class="icon">&#9749;</span> <i>Coffee break</i></td>
-				</tr>
-				<tr>
-					<td class="time"><b>11:30 - 13:00</b></td>
-					<td onclick="return abstract('matthieu');" class="speaker oneandahalf" id="td_matthieu" rowspan=3 title="11:30 - 12:15">
-						<b><center><a href="https://www.epfl.ch/labs/pcsl/prof-matthieu-wyart/" class="speakername">Matthieu Wyart</a></b><br>
-						<i>EPFL</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Learning and Generating Compositional Data</span><br><br>
-						<span class="abstract" id="abstract_matthieu"><b><span id="arrow_matthieu" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_matthieu"></span>
-					</td>
-					<td onclick="return abstract('giuseppe');" class="speaker oneandahalf" id="td_giuseppe" rowspan=3 title="11:30 - 12:15">
-						<b><center><a href="https://people.epfl.ch/giuseppe.carleo?lang=en" class="speakername">Giuseppe Carleo</a></b><br>
-						<i>EPFL</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Neural Simulation of Quantum Many-Body Physics</span><br><br>
-						<span class="abstract" id="abstract_giuseppe"><b><span id="arrow_giuseppe" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_giuseppe"></span>
-					</td>
-					<td onclick="return abstract('marc');" class="speaker oneandahalf" id="td_marc" rowspan=3 title="11:30 - 12:15">
-						<b><center><a href="https://www.di.ens.fr/~lelarge/" class="speakername">Marc Lelarge</a></b><br>
-						<i>INRIA and ENS</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Chaining Graph Neural Networks for Combinatorial Optimization: Learning Graph Matching</span><br><br>
-						<span class="abstract" id="abstract_marc"><b><span id="arrow_marc" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_marc"></span>
-					</td>
-					<td onclick="return abstract('yuval');" class="speaker" id="td_yuval" rowspan=2 title="11:30 - 12:00">
-						<b><center><a href="https://yuvali.cswp.cs.technion.ac.il/" class="speakername">Yuval Ishai</a></b><br>
-						<i>Technion - Israel Institute of Technology</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Low-Complexity Cryptography</span><br><br>
-						<span class="abstract" id="abstract_yuval"><b><span id="arrow_yuval" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_yuval"></span>
-					</td>
-					<td onclick="return abstract('andrej');" class="speaker" id="td_andrej" rowspan=2 title="11:30 - 12:00">
-						<b><center><a href="https://andrejb.net/" class="speakername">Andrej Bogdanov</a></b><br>
-						<i>University of Ottawa</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Hardness Versus Randomness for Statistical Inference</span><br><br>
-						<span class="abstract" id="abstract_andrej"><b><span id="arrow_andrej" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_andrej"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-
-					<td onclick="return abstract('pravesh');" class="speaker" id="td_pravesh" rowspan=2 title="12:00 - 12:30">
-						<b><center><a href="https://www.cs.princeton.edu/~kothari/" class="speakername">Pravesh K. Kothari</a></b><br>
-						<i>Princeton University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_pravesh"><b><span id="arrow_pravesh" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_pravesh"></span>
-					</td>
-
-					<td onclick="return abstract('ilias_d');" class="speaker" id="td_ilias_d" rowspan=2 title="12:00 - 12:30">
-						<b><center><a href="http://www.iliasdiakonikolas.org/" class="speakername">Ilias Diakonikolas</a></b><br>
-						<i>UW Madison</i></center><br>
-						<b>Title:</b><br> Non-Gaussian Component Analysis and its Applications<br><br>
-						<span class="abstract" id="abstract_ilias_d"><b><span id="arrow_ilias_d" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_ilias_d"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('florent');" class="speaker oneandahalf" id="td_florent" rowspan=3 title="12:15 - 13:00">
-						<b><center><a href="https://florentkrzakala.com/" class="speakername">Florent Krzakala</a></b><br>
-						<i>EPFL</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_florent"><b><span id="arrow_florent" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_florent"></span>
-					</td>
-					<td onclick="return abstract('michael');" class="speaker oneandahalf" id="td_michael" rowspan=3 title="12:15 - 13:00">
-						<b><center><a href="https://qi.rub.de/walter" class="speakername">Michael Walter</a></b><br>
-						<i>Ruhr University Bochum</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Trading Space for Time in Nonlocal Games</span><br><a href="https://arxiv.org/abs/2402.17301"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_michael"><b><span id="arrow_michael" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_michael"></span>
-					</td>
-
-					<td onclick="return abstract('chris');" class="speaker oneandahalf" id="td_chris" rowspan=3 title="12:15 - 13:00">
-						<b><center><a href="https://chrisjones.space/" class="speakername">Chris Jones</a></b><br>
-						<i>Bocconi University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br>Diagram Analysis of Iterative Algorithms</span><br>
-						<a href="https://arxiv.org/abs/2404.07881"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_chris"><b><span id="arrow_chris" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_chris"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('eren');" class="speaker" id="td_eren" rowspan=2 title="12:30 - 13:00">
-						<b><center><a href="https://www.eren-kizildag.com/" class="speakername">Eren C. K&#305;z&#305;lda&#287;</a></b><br>
-						<i>Columbia University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Statistical-Computational Tradeoffs in Random Optimization Problems</span><br><br>
-						<span class="abstract" id="abstract_eren"><b><span id="arrow_eren" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_eren"></span>
-					</td>
-
-					<td onclick="return abstract('ilias_z');" class="speaker" id="td_ilias_z" rowspan=2 title="12:30 - 13:00">
-						<b><center><a href="https://iliaszadik.github.io/" class="speakername">Ilias Zadik</a></b><br>
-						<i>Yale University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_ilias_z"><b><span id="arrow_ilias_z" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_ilias_z"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time" title="13:00 - 14:30"><b>13:00 - 14:30</b></td>
-					<td colspan=5 class="lunch" id="td_lunch"><span class="highlighted"><span class="icon">&#127837;</span> Lunch</span></td>
-				</tr>
-				<tr>
-					<td class="time"><b>14:30 - 16:00</b></td>
-					<td onclick="return abstract('zohar');" class="speaker oneandahalf" id="td_zohar" rowspan=3 title="14:30 - 15:15">
-						<b><center><a href="http://old.phys.huji.ac.il/~zohar.ringel/" class="speakername">Zohar Ringel</a></b><br>
-						<i>The Hebrew University of Jerusalem</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Some Advancements in GP Theory with Applications to Language Models</span><br><br>
-						<span class="abstract" id="abstract_zohar"><b><span id="arrow_zohar" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_zohar"></span>
-					</td>
-					<td onclick="return abstract('stephane');" class="speaker oneandahalf" id="td_stephane" rowspan=3 title="14:30 - 15:15">
-						<b><center><a href="https://www.di.ens.fr/~mallat/mallat.html" class="speakername">Stephane Mallat</a></b><br>
-						<i>ENS Paris</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_stephane"><b><span id="arrow_stephane" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_stephane"></span>
-					</td>
-					<td onclick="return abstract('nobutaka');" class="speaker" id="td_nobutaka" rowspan=2 title="14:30 - 15:00">
-						<b><center><a href="https://sites.google.com/view/nobutaka-shimizu/home" class="speakername">Nobutaka Shimizu</a></b><br>
-						<i>Tokyo Institute of Technology</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Hardness Amplification for Planted Clique Problem</span><br>
-						<a href="https://eccc.weizmann.ac.il/report/2023/026/"><i>eccc</i></a><br><br>
-						<span class="abstract" id="abstract_nobutaka"><b><span id="arrow_nobutaka" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_nobutaka"></span>
-					</td>
-					<td onclick="return abstract('tim');" class="speaker" id="td_tim" rowspan=2 title="14:30 - 15:00">
-						<b><center><a href="http://www.kunisky.com/" class="speakername">Tim Kunisky</a></b><br>
-						<i>Yale University</i></i></center><br>
-						<span class="papertitle"><b>Title:</b><br>Low Coordinate Degree Algorithms: A Flexible Framework for Computational Thresholds</span><br><a href="https://arxiv.org/abs/2403.07862"><i>arXiv</i></a><br><br>
-						<span class="abstract" id="abstract_tim"><b><span id="arrow_tim" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_tim"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('vinod');" class="speaker" id="td_vinod" rowspan=2 title="15:00 - 15:30">
-						<b><center><a href="https://people.csail.mit.edu/vinodv/" class="speakername">Vinod Vaikuntanathan</a></b><br>
-						<i>Massachusetts Institute of Technology</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Continuous Learning with Errors and Applications: Gaussian Mixtures and Undetectable Backdoors</span><br><br>
-						<span class="abstract" id="abstract_vinod"><b><span id="arrow_vinod" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_vinod"></span>
-					</td>
-					<td onclick="return abstract('afonso');" class="speaker" id="td_afonso" rowspan=2 title="15:00 - 15:30">
-						<b><center><a href="https://people.math.ethz.ch/~abandeira/" class="speakername">Afonso S. Bandeira</a></b><br>
-						<i>ETH Z&uuml;rich</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Spike Models, Free Probability, and the Kikuchi method for Tensor PCA</span><br><br>
-						<span class="abstract" id="abstract_afonso"><b><span id="arrow_afonso" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_afonso"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('song');" class="speaker oneandahalf" id="td_song" rowspan=3 title="15:15 - 16:00">
-						<b><center><a href="https://www.stat.berkeley.edu/~songmei/" class="speakername">Song Mei</a></b><br>
-						<i>UC Berkeley</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_song"><b><span id="arrow_song" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_song"></span>
-					</td>
-					<td onclick="return abstract('johanni');" class="speaker oneandahalf" id="td_johanni" rowspan=3 title="15:15 - 16:00">
-						<b><center><a href="https://people.epfl.ch/johanni.brea?lang=en" class="speakername">Johanni Brea</a></b><br>
-						<i>EPFL</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_johanni"><b><span id="arrow_johanni" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_johanni"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('federico');" class="speaker" id="td_federico" rowspan=2 title="15:30 - 16:00">
-						<b><center><a href="https://corsidilaurea.uniroma1.it/user/11810" class="speakername">Federico Ricci-Tersenghi</a></b><br>
-						<i>Sapienza Universit&agrave; di Roma</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> </span><br><br>
-						<span class="abstract" id="abstract_federico"><b><span id="arrow_federico" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_federico"></span>
-					</td>
-					<td onclick="return abstract('prashant');" class="speaker" id="td_prashant" rowspan=2 title="15:30 - 16:00">
-						<b><center><a href="https://www.comp.nus.edu.sg/~prashant/" class="speakername">Prashant Nalini Vasudevan</a></b><br>
-						<i>National University of Singapore</i></center><br>
-						<span class="papertitle"><b>Title:</b><br>Average-Case Complexity of Problems from Fine-Grained Complexity</span><br><br>
-						<span class="abstract" id="abstract_prashant"><b><span id="arrow_prashant" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_prashant"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b>16:00 - 16:30</b></td>
-					<td class="coffee" colspan=5 id="td_coffee3" title="16:00 - 16:30"><span class="icon">&#9749;</span> <i>Coffee break</i></td>
-				</tr>
-				<tr>
-					<td class="time"><b>16:30 - 17:45</b></td>
-					<td onclick="return abstract('yue');" class="speaker oneandahalf" id="td_yue" rowspan=3 title="16:30 - 17:15">
-						<b><center><a href="https://lu.seas.harvard.edu/" class="speakername">Yue M. Lu</a></b><br>
-						<i>Harvard University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_yue"><b><span id="arrow_yue" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_yue"></span>
-					</td>
-					<td onclick="return abstract('moritz');" class="speaker oneandahalf" id="td_moritz" rowspan=3 title="16:30 - 17:15">
-						<b><center><a href="https://www.fz-juelich.de/profile/helias_m" class="speakername">Moritz Helias</a></b><br>
-						<i>J&uuml;lich Research Centre, RWTH Aachen</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_moritz"><b><span id="arrow_moritz" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_moritz"></span>
-					</td>
-					<td onclick="return abstract('omri');" class="speaker oneandahalf" id="td_omri" rowspan=3 title="16:30 - 17:15">
-						<b><center><a href="https://dblp.org/pid/243/6137.html" class="speakername">Omri Shmueli</a></b><br>
-						<i>Tel Aviv University, Weizmann University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> Quantum Algorithms in a Superposition of Spacetimes</span><br>
-						<a href="https://eccc.weizmann.ac.il/report/2024/050/"><i>eccc</i></a><br><br>
-						<span class="abstract" id="abstract_omri"><b><span id="arrow_omri" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_omri"></span>
-					</td>
-					<td class="collab" id="td_collab" rowspan=3 colspan=2 title="16:30 - 18:00"><span class="icon">&#127858;</span> Collaboration Time</td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-					<td onclick="return abstract('marc_m');" class="speaker" id="td_marc_m" rowspan=2 title="17:15 - 17:45">
-						<b><center><a href="https://www.marcmezard.fr/" class="speakername">Marc M&#233;zard</a></b><br>
-						<i>Bocconi University</i></center><br>
-						<span class="papertitle"><b>Title:</b><br>Discussion on the new Journal of Artificial Intelligence Theory</span><br><br>
-						<span class="abstract" id="abstract_marc"><b><span id="arrow_marc_m" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_marc_m"></span>
-					</td>
-					<td onclick="return abstract('sueyeon');" class="speaker oneandahalf" id="td_sueyeon" rowspan=3 title="17:15 - 18:00">
-						<b><center><a href="https://sites.google.com/site/sueyeonchung/" class="speakername">SueYeon Chung</a></b><br>
-						<i>NYU, Flatiron Institute</i></center><br>
-						<span class="papertitle"><b>Title:</b><br> <i>tba</i></span><br><br>
-						<span class="abstract" id="abstract_sueyeon"><b><span id="arrow_sueyeon" class="arrow">&#9654;</span>&nbsp; Abstract</b></a><br>
-						<span id="body_sueyeon"></span>
-					</td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-				</tr>
-				<tr>
-					<td class="time"><b></b></td>
-				</tr>
-				<tr style="max-height:41px" >
-					<td class="time"><b>17:45 - 18:00</b></td>
-					<td class="aperitivo" id="td_aperitivo" rowspan=2 title="17:45 - 20:00"><span class="icon">&#127858;</span> Discussion and Aperitivo</td>
-				</tr>
-				<tr style="height:156px;">
-					<td class="time"><b>18:00 - 20:00</b></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-				</tr>
-				<tr>
-					<td class="time"><b>20:00 - 22:00</b></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-					<td class="dinner" id="td_dinner" title="20:00 - 22:00"><span class="icon">&#127858;</span> <span class="highlighted">Dinner for invited speakers</span></td>
-					<td class="empty"></td>
-					<td class="empty"></td>
-				</tr>
-			</table>
-			<div class="line" id="line" style="display:none;"></div>
-				<span class="currenttime" id="clock"></span>
-			</center>
-			<br>
-			<div style="font-size:10px;margin-bottom:200px;"><i>Photos by Federica Ariemma, Bozhin Karaivanov, Amirali Mirhashemian, &#321;ukasz Rawa, and krakenimages on Unsplash.</i></span>
-			<br>
-		</div>
-	</body>
-
+      <div class="site-footer">
+        <div class="container"></div>
+      </div>
+      <div class="c-footer__wrapper">
+        <footer class="c-footer container">
+          <div class="c-footer__row">
+            <div class="c-footer__first">
+              <div class="c-footer-info">
+                <div id="block-departmentofaccounting" class="block-departmentofaccounting block block--block-content block--block-content49525f83-fa52-441a-9d25-c3d382eadfd3 c-footer__text">
+                  <h3 class="c-footer__title">
+                    <p>
+                      <strong>Department</strong> of <strong>Decision Sciences</strong>
+                    </p>
+                  </h3>
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--block-content-body field--item">
+                    <p>Department Head: Emanuele Borgonovo</p>
+                    <p>Via Roentgen, 1 (3rd floor) 20136, Milano <br />Department's Office: rooms 3-E2-01, 3-D2-08 <br />Students should contact the Department's Office through the B in Touch platform available in the yoU@B student diary. </p>
+                  </div>
+                </div>
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block-mainnavigation">
+                  <div class="block-title visually-hidden h2" id="block-mainnavigation-menu">Main navigation</div>
+                  <ul class="nav menu--main">
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/" class="nav-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/research" class="nav-link" data-drupal-link-system-path="node/2">Research</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/future-events" class="nav-link" data-drupal-link-system-path="node/3">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/latest-news-department" class="nav-link" data-drupal-link-system-path="node/1601">News</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/people" class="nav-link" data-drupal-link-system-path="node/5">People</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://dec.unibocconi.eu/about" class="nav-link" data-drupal-link-system-path="node/6">About</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div id="block-copyright" class="block-copyright block block--block-content block--block-contentd7c22c9d-fcd7-43e5-8b41-5e37731fe978 c-footer__copyright">
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--block-content-body field--item">
+                    <p>© Università Bocconi - Via Sarfatti, 25 Milano - PI 03628350153</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">
+      {
+        "path": {
+          "baseUrl": "\/",
+          "scriptPath": null,
+          "pathPrefix": "",
+          "currentPath": "node\/1610",
+          "currentPathIsAdmin": false,
+          "isFront": false,
+          "currentLanguage": "en",
+          "currentQuery": {
+            "fbclid": "IwAR3qIKqeF_bp4tHisPdeJWxehBJWwZsUmo63fTRRn1NR8T06CizY_qWTRAA"
+          }
+        },
+        "pluralDelimiter": "\u0003",
+        "suppressDeprecationErrors": true,
+        "ajaxTrustedUrl": {
+          "\/search": true
+        },
+        "user": {
+          "uid": 0,
+          "permissionsHash": "e64d908927ac4244a88b625bd5585feac08ff33e64e8c958c8267170f6268eb9"
+        }
+      }
+    </script>
+    <script src="bocconi-example.js"></script>
+    <script src="https://static.addtoany.com/menu/page.js" async></script>
+  </body>
 </html>

@@ -1,12 +1,12 @@
 /* Main body */
-div {
+/* div {
 	margin:auto;
 	max-width:1200px;
 }
 
 body {
     font-family: 'Trebuchet MS', sans-serif;
-}
+} */
 
 /* The time line (the red one) */
 .line {
@@ -118,7 +118,7 @@ body {
 /* Tables */
 table {
     display: block;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     white-space: nowrap;
     table-layout: fixed;
     margin-left:100px;
@@ -156,15 +156,19 @@ th {
 
 /* The td for a talk/speaker */
 .speaker {
+	line-height: 1;
 	cursor: pointer;
 	background: linear-gradient(#DCFEFA, 10%, #BADCE8);
 	text-align: justify;
 	height: 156px;
 	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
 }
-
+.affiliation{
+	margin-top: 10px;
+}
 .speakername {
-	font-size:19px;
+	font-size:17px;
+	line-height: 2;
 }
 
 b.speaker {
