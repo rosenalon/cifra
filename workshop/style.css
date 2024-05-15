@@ -162,6 +162,8 @@ th {
 	text-align: justify;
 	height: 156px;
 	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
+	padding-left: 10px;
+	padding-right:10px;
 }
 .affiliation{
 	margin-top: 10px;
