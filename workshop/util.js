@@ -54,7 +54,7 @@ function time(){
 	c.innerHTML = timeNow();
 
 	dref.setHours(9,0,0,0);
-	var order = ["coffee1","giulio_b",	"stephane",	"coffee2",	"matthieu",	"florent", 	"lunch",	"zohar",	"song",	"coffee3",	"yue", "sueyeon",		"dinner"];
+	var order = ["coffee1","giulio_b",	"cengiz",	"coffee2",	"matthieu",	"florent", 	"lunch",	"zohar",	"song",	"coffee3",	"yue", "sueyeon",		"dinner"];
 	var times = [9, 		9.5, 		10.25, 		11, 		11.5, 	    12.25, 		13, 		14.5, 		15.25,		15.75, 		16.5, 	 17.25,	     	20];
 	if(order.length != times.length){
 		alert("order length ("+order.length+") != times length ("+times.length+")");

@@ -17,7 +17,8 @@ body {
 }
 .currenttime {
 	position:absolute;
-	margin-left:-50px;
+	margin-left:-55px;
+	margin-top: -5px;
 }
 .papertitle {
 	font-size:14px;
@@ -66,7 +67,7 @@ body {
     background-size: 520px;
 	vertical-align: middle;
 	font-size: 16px;
-	height: 204px;
+	height: 156px;
 	box-shadow: 2px 2px 4px -2px rgb(100, 100, 100);
 }
 
